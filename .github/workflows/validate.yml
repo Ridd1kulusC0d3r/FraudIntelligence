@@ -26,8 +26,5 @@ jobs:
       - name: Validate YAML and JSON Schema
         run: python tools/validate_knowledge.py
 
-      - name: Rebuild Navigator catalog
-        run: python tools/build_catalog.py
-
-      - name: Ensure generated catalog is current
-        run: git diff --exit-code -- docs/data/catalog.json
+      - name: Verify Navigator catalog is current
+        run: python tools/build_catalog.py --check
