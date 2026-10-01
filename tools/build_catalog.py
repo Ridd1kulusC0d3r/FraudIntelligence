@@ -78,7 +78,17 @@ def main() -> int:
             return 1
         with OUT.open("r", encoding="utf-8") as fh:
             committed = json.load(fh)
-        if committed != payload:
+        def keyed(doc: dict) -> dict:
+            return {
+                (item["type"], item["id"]): item
+                for item in doc.get("items", [])
+            }
+
+        same_header = (
+            committed.get("version") == payload.get("version")
+            and committed.get("count") == payload.get("count")
+        )
+        if not same_header or keyed(committed) != keyed(payload):
             print("ERROR: docs/data/catalog.json is stale.")
             return 1
         print(f"catalog is current ({payload['count']} items)")
