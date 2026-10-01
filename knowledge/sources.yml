@@ -1,4 +1,4 @@
-version: "0.1"
+version: "0.2"
 last_verified: "2026-10-01"
 sources:
   - {id: SRC-MITRE-F3, title: MITRE Fight Fraud Framework, publisher: Center for Threat-Informed Defense, url: "https://github.com/center-for-threat-informed-defense/fight-fraud-framework", class: primary}
@@ -9,3 +9,15 @@ sources:
   - {id: SRC-EPC-FRIDA, title: FRaud Information Distribution Arrangement, publisher: European Payments Council, url: "https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/fraud-information-distribution-arrangement", class: standards-primary}
   - {id: SRC-GSE, title: Global Signal Exchange, publisher: Global Signal Exchange, url: "https://www.globalsignalexchange.org/about", class: primary}
   - {id: SRC-AU-SPF, title: Scams Prevention Framework, publisher: Australian Competition and Consumer Commission, url: "https://www.accc.gov.au/about-us/scams-prevention-framework", class: regulator-primary}
+  - {id: SRC-MITRE-APT38, title: APT38 G0082, publisher: MITRE ATT&CK, url: "https://attack.mitre.org/groups/G0082/", class: primary-knowledge-base}
+  - {id: SRC-MITRE-LAZARUS, title: Lazarus Group G0032, publisher: MITRE ATT&CK, url: "https://attack.mitre.org/groups/G0032/", class: primary-knowledge-base}
+  - {id: SRC-MITRE-FIN7, title: FIN7 G0046, publisher: MITRE ATT&CK, url: "https://attack.mitre.org/groups/G0046/", class: primary-knowledge-base}
+  - {id: SRC-MITRE-CARBANAK, title: Carbanak G0008, publisher: MITRE ATT&CK, url: "https://attack.mitre.org/groups/G0008/", class: primary-knowledge-base}
+  - {id: SRC-MITRE-COBALT, title: Cobalt Group G0080, publisher: MITRE ATT&CK, url: "https://attack.mitre.org/groups/G0080/", class: primary-knowledge-base}
+  - {id: SRC-MITRE-SILENCE, title: Silence G0091, publisher: MITRE ATT&CK, url: "https://attack.mitre.org/groups/G0091/", class: primary-knowledge-base}
+  - {id: SRC-MITRE-FIN8, title: FIN8 G0061, publisher: MITRE ATT&CK, url: "https://attack.mitre.org/groups/G0061/", class: primary-knowledge-base}
+  - {id: SRC-ODNI-ICD203, title: ICD 203 Analytic Standards, publisher: ODNI, url: "https://www.dni.gov/files/documents/ICD/ICD-203.pdf", class: government-primary}
+  - {id: SRC-OASIS-STIX21, title: STIX 2.1, publisher: OASIS, url: "https://www.oasis-open.org/standard/stix2-1/", class: standards-primary}
+  - {id: SRC-OASIS-TAXII21, title: TAXII 2.1, publisher: OASIS, url: "https://www.oasis-open.org/standard/taxii-version-2-1/", class: standards-primary}
+  - {id: SRC-FIRST-TLP20, title: TLP 2.0, publisher: FIRST, url: "https://www.first.org/tlp/", class: standards-primary}
+  - {id: SRC-MITRE-D3FEND, title: MITRE D3FEND, publisher: MITRE, url: "https://d3fend.mitre.org/", class: primary-knowledge-base}

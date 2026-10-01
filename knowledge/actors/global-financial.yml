@@ -1,0 +1,101 @@
+version: "0.1"
+last_verified: "2026-10-01"
+actors:
+  - id: FI-ACTOR-KP-001
+    name: APT38
+    aliases: [BeagleBoyz]
+    associated_groups: [Bluenoroff, Stardust-Chollima, Sapphire-Sleet, COPERNICIUM]
+    mitre_id: G0082
+    type: state-linked-financial-threat-actor
+    region: North Korea
+    status: active
+    confidence: confirmed
+    featured: true
+    source_class: primary-knowledge-base
+    source: https://attack.mitre.org/groups/G0082/
+    focus: [banks, financial-institutions, swift, atms, cryptocurrency, payment-switches]
+    notes: >
+      MITRE describes APT38 as a North Korean state-sponsored group specializing
+      in financial cyber operations. Public naming overlaps with broader Lazarus
+      reporting, so this object is not treated as a simple Lazarus alias.
+
+  - id: FI-ACTOR-KP-002
+    name: Lazarus Group
+    aliases: [HIDDEN-COBRA, Labyrinth-Chollima]
+    mitre_id: G0032
+    type: state-linked-threat-actor
+    region: North Korea
+    status: active
+    confidence: confirmed
+    featured: true
+    source_class: primary-knowledge-base
+    source: https://attack.mitre.org/groups/G0032/
+    focus: [state-sponsored-cyber-operations, destructive-operations, financial-operation-overlap]
+    notes: >
+      MITRE notes that Lazarus is often used as an umbrella term for overlapping
+      North Korean operators. Keep cluster-level attribution distinct when evidence allows.
+
+  - id: FI-ACTOR-GLOBAL-001
+    name: FIN7
+    aliases: [Carbon-Spider, Sangria-Tempest]
+    mitre_id: G0046
+    type: financially-motivated-threat-group
+    region: Global
+    status: active
+    confidence: confirmed
+    featured: true
+    source_class: primary-knowledge-base
+    source: https://attack.mitre.org/groups/G0046/
+    focus: [payment-data, point-of-sale, financial-services, ransomware]
+
+  - id: FI-ACTOR-GLOBAL-002
+    name: Carbanak
+    aliases: [Anunak]
+    mitre_id: G0008
+    type: cybercriminal-group
+    region: Global
+    status: active
+    confidence: confirmed
+    featured: false
+    source_class: primary-knowledge-base
+    source: https://attack.mitre.org/groups/G0008/
+    focus: [financial-institutions, banking-systems, payment-infrastructure]
+
+  - id: FI-ACTOR-GLOBAL-003
+    name: Cobalt Group
+    aliases: [Cobalt-Gang, Cobalt-Spider]
+    mitre_id: G0080
+    type: financially-motivated-threat-group
+    region: Eastern Europe / Central Asia / Southeast Asia
+    status: active
+    confidence: confirmed
+    featured: true
+    source_class: primary-knowledge-base
+    source: https://attack.mitre.org/groups/G0080/
+    focus: [atms, card-processing, payment-systems, swift]
+
+  - id: FI-ACTOR-GLOBAL-004
+    name: Silence
+    aliases: [Whisper-Spider]
+    mitre_id: G0091
+    type: financially-motivated-threat-actor
+    region: Eastern Europe / Central Asia
+    status: active
+    confidence: confirmed
+    featured: false
+    source_class: primary-knowledge-base
+    source: https://attack.mitre.org/groups/G0091/
+    focus: [banks, atms, card-processing]
+
+  - id: FI-ACTOR-GLOBAL-005
+    name: FIN8
+    aliases: [Syssphinx]
+    mitre_id: G0061
+    type: financially-motivated-threat-group
+    region: Global
+    status: active
+    confidence: confirmed
+    featured: false
+    source_class: primary-knowledge-base
+    source: https://attack.mitre.org/groups/G0061/
+    focus: [point-of-sale, hospitality, retail, financial-sector, ransomware]

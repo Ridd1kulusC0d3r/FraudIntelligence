@@ -17,10 +17,17 @@ def read_yaml(path: pathlib.Path):
         return yaml.safe_load(fh)
 
 
+def collect(directory: pathlib.Path, key: str) -> list[dict]:
+    result: list[dict] = []
+    for path in sorted(directory.glob("*.yml")):
+        result.extend((read_yaml(path) or {}).get(key, []))
+    return result
+
+
 def build_payload() -> dict:
     frameworks = read_yaml(ROOT / "knowledge" / "frameworks.yml").get("frameworks", [])
-    actors = read_yaml(ROOT / "knowledge" / "actors" / "brazil-latam.yml").get("actors", [])
-    threats = read_yaml(ROOT / "knowledge" / "threats" / "brazil-latam.yml").get("threats", [])
+    actors = collect(ROOT / "knowledge" / "actors", "actors")
+    threats = collect(ROOT / "knowledge" / "threats", "threats")
 
     items = []
     for x in frameworks:
@@ -33,6 +40,7 @@ def build_payload() -> dict:
             "status": x["status"],
             "source": x["source"],
         })
+
     for x in actors:
         items.append({
             "id": x["id"],
@@ -42,7 +50,12 @@ def build_payload() -> dict:
             "scope": ", ".join(x.get("focus", [])),
             "status": x["status"],
             "source": x["source"],
+            "region": x.get("region"),
+            "confidence": x.get("confidence"),
+            "featured": bool(x.get("featured", False)),
+            "aliases": x.get("aliases", []),
         })
+
     for x in threats:
         items.append({
             "id": x["id"],
@@ -55,7 +68,7 @@ def build_payload() -> dict:
         })
 
     return {
-        "version": "0.2",
+        "version": "0.3",
         "count": len(items),
         "items": sorted(items, key=lambda x: (x["type"], x["name"].lower())),
     }
@@ -69,7 +82,6 @@ def main() -> int:
         help="Compare generated catalog semantically with the committed catalog.",
     )
     args = parser.parse_args()
-
     payload = build_payload()
 
     if args.check:
@@ -78,6 +90,7 @@ def main() -> int:
             return 1
         with OUT.open("r", encoding="utf-8") as fh:
             committed = json.load(fh)
+
         def keyed(doc: dict) -> dict:
             return {
                 (item["type"], item["id"]): item

@@ -1,0 +1,91 @@
+version: "0.1"
+last_verified: "2026-10-01"
+requirements:
+  - id: PIR-BR-001
+    title: Payment authorization threat actors
+    priority: critical
+    status: active
+    decision_supported: >
+      Prioritize controls, telemetry and hunting for actors capable of reaching
+      or manipulating Brazilian payment authorization infrastructure.
+    key_questions:
+      - Which actors target Pix, STR, Boleto, RSFN, payment APIs or mTLS credentials?
+      - Which access paths bridge cloud, CI/CD or Active Directory into payment execution?
+      - Which observed behaviors have no current detection coverage?
+    collection_requirements:
+      - vendor-primary threat research
+      - MITRE ATT&CK actor and technique data
+      - payment and identity telemetry
+      - cloud and CI/CD telemetry
+    outputs: [actor-profile, campaign-brief, coverage-gap, detection-requirement]
+
+  - id: PIR-BR-002
+    title: External signals that improve fraud decisions
+    priority: high
+    status: active
+    decision_supported: >
+      Decide which cross-sector signals are worth integrating into fraud prevention
+      without treating a single signal as proof of wrongdoing.
+    key_questions:
+      - Which telecom events materially change transaction risk?
+      - Which identity and device continuity signals reduce false positives?
+      - Which public infrastructure signals provide useful early warning?
+    collection_requirements:
+      - GSMA Open Gateway and CAMARA specifications
+      - internal fraud outcomes
+      - identity and device telemetry
+      - privacy and governance constraints
+    outputs: [signal-assessment, control-recommendation, measurement-plan]
+
+  - id: PIR-GLOBAL-001
+    title: Financial threat actor convergence
+    priority: high
+    status: active
+    decision_supported: >
+      Determine whether global financial threat actors exhibit infrastructure,
+      tooling or TTP overlap relevant to Brazil and Latin America.
+    key_questions:
+      - What overlaps are observed among APT38, FIN7, Carbanak, Cobalt Group and regional actors?
+      - Are overlaps shared tools, shared infrastructure, copied tradecraft or actual actor relationships?
+      - Which overlaps are stable enough to support hunting?
+    collection_requirements:
+      - primary actor profiles
+      - malware and infrastructure reporting
+      - ATT&CK technique mappings
+      - time-bounded campaign evidence
+    outputs: [relationship-assessment, hypothesis-set, hunting-priority]
+
+  - id: PIR-DET-001
+    title: Detection coverage gaps
+    priority: critical
+    status: active
+    decision_supported: >
+      Prioritize detection engineering against the highest-impact uncovered fraud
+      and intrusion behaviors.
+    key_questions:
+      - Which F3, FT3 and ATT&CK techniques lack observables?
+      - Which observables lack telemetry?
+      - Which detections lack tested controls and feedback?
+    collection_requirements:
+      - framework crosswalks
+      - telemetry inventory
+      - detection inventory
+      - incident and false-positive outcomes
+    outputs: [coverage-matrix, detection-backlog, telemetry-gap]
+
+  - id: PIR-AI-001
+    title: Evidence-backed AI capability changes
+    priority: medium
+    status: active
+    decision_supported: >
+      Separate reproducible AI-enabled threat capability from marketing claims and
+      prioritize only changes that alter defensive assumptions.
+    key_questions:
+      - Which AI-enabled fraud or OSINT capabilities have primary evidence?
+      - What capability changes analyst workload, scale, cost or attribution risk?
+      - Which claims remain demonstrations rather than operational threat evidence?
+    collection_requirements:
+      - peer-reviewed or reproducible research
+      - primary vendor research
+      - incident reporting
+    outputs: [capability-assessment, evidence-gap, watchlist]

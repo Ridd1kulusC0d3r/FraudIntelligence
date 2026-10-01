@@ -1,4 +1,4 @@
-version: "0.2"
+version: "0.3"
 last_verified: "2026-10-01"
 actors:
   - id: FI-ACTOR-BR-001
@@ -8,6 +8,7 @@ actors:
     region: Brazil
     status: active
     confidence: confirmed
+    featured: true
     source_class: vendor-primary
     source: https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil
     focus: [payment-systems, pix, str, boleto, cloud, ci-cd]
@@ -22,6 +23,7 @@ actors:
     region: Brazil
     status: active
     confidence: confirmed
+    featured: true
     source_class: vendor-primary
     source: https://www.crowdstrike.com/en-us/adversaries/slim-spider/
     focus: [financial-institutions, cloud, pix, digital-assets]
@@ -36,6 +38,7 @@ actors:
     region: Brazil
     status: active
     confidence: high
+    featured: false
     source_class: vendor-primary
     source: https://www.group-ib.com/blog/brazetsu-ai-enhanced-iab-marketplace/
     focus: [initial-access-broker, access-marketplace, brazil, latam]
@@ -48,17 +51,7 @@ actors:
     region: Brazil
     status: active
     confidence: confirmed
+    featured: true
     source_class: vendor-primary
     source: https://securelist.com/prilex-atm-pos-malware-evolution/107551/
     focus: [pos, payment-flow, emv, physical-payments]
-
-  - id: FI-ACTOR-KP-001
-    name: Lazarus Group
-    aliases: [APT38, HIDDEN-COBRA, BeagleBoyz]
-    type: state-linked-threat-actor
-    region: North-Korea
-    status: active
-    confidence: confirmed
-    source_class: government-primary
-    source: https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-239a
-    focus: [financial-institutions, payment-switches, fastcash]

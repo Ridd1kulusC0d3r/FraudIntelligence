@@ -1,4 +1,4 @@
-version: "0.2"
+version: "0.3"
 last_verified: "2026-10-01"
 threats:
   - id: FI-THREAT-BR-001
