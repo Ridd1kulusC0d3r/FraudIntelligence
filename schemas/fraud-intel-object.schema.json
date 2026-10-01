@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ridd1kulusc0d3r.github.io/FraudIntelligence/schemas/fraud-intel-object.schema.json",
+  "title": "Fraud Intelligence Object",
+  "type": "object",
+  "required": ["id", "type", "name", "description", "status", "confidence", "sources", "last_verified"],
+  "properties": {
+    "id": {"type": "string", "minLength": 3},
+    "type": {"type": "string", "enum": ["actor","campaign","scheme","journey","tactic","technique","procedure","manipulation_pattern","observable","detection","control","identity","account","device","channel","transaction","beneficiary","mule","infrastructure","regulation","source"]},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string", "minLength": 1},
+    "status": {"type": "string", "enum": ["active","historical","draft","research","deprecated","unverified"]},
+    "confidence": {"type": "string", "enum": ["confirmed","high","medium","low","unverified"]},
+    "source_native_ids": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "id"],
+        "properties": {"source": {"type": "string"}, "id": {"type": "string"}},
+        "additionalProperties": false
+      }
+    },
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["url", "source_class"],
+        "properties": {
+          "url": {"type": "string", "format": "uri"},
+          "source_class": {"type": "string", "enum": ["primary","regulator-primary","academic-primary","vendor-primary","secondary","community"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "first_seen": {"type": ["string", "null"], "format": "date"},
+    "last_seen": {"type": ["string", "null"], "format": "date"},
+    "last_verified": {"type": "string", "format": "date"},
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "target"],
+        "properties": {"type": {"type": "string"}, "target": {"type": "string"}, "confidence": {"type": "string"}},
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

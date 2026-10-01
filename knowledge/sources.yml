@@ -1,0 +1,11 @@
+version: "0.1"
+last_verified: "2026-10-01"
+sources:
+  - {id: SRC-MITRE-F3, title: MITRE Fight Fraud Framework, publisher: Center for Threat-Informed Defense, url: "https://github.com/center-for-threat-informed-defense/fight-fraud-framework", class: primary}
+  - {id: SRC-STRIPE-FT3, title: FT3, publisher: Stripe, url: "https://github.com/stripe/ft3", class: primary}
+  - {id: SRC-GIB-FM2, title: Fraud Matrix 2.0, publisher: Group-IB, url: "https://www.group-ib.com/media-center/press-releases/next-gen-fraud-matrix/", class: primary}
+  - {id: SRC-FIST, title: "FIST: A Structured Threat Modeling Framework for Fraud Incidents", publisher: arXiv, url: "https://arxiv.org/abs/2506.05740", class: academic-primary}
+  - {id: SRC-BCB-6, title: Resolução Conjunta nº 6 de 23/5/2023, publisher: Banco Central do Brasil, url: "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=6&tipo=Resolu%C3%A7%C3%A3o+Conjunta", class: regulator-primary}
+  - {id: SRC-EPC-FRIDA, title: FRaud Information Distribution Arrangement, publisher: European Payments Council, url: "https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/fraud-information-distribution-arrangement", class: standards-primary}
+  - {id: SRC-GSE, title: Global Signal Exchange, publisher: Global Signal Exchange, url: "https://www.globalsignalexchange.org/about", class: primary}
+  - {id: SRC-AU-SPF, title: Scams Prevention Framework, publisher: Australian Competition and Consumer Commission, url: "https://www.accc.gov.au/about-us/scams-prevention-framework", class: regulator-primary}
