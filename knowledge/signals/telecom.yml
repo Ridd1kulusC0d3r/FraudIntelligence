@@ -1,0 +1,42 @@
+version: "0.1"
+last_verified: "2026-10-01"
+signals:
+  - id: FI-SIGNAL-TEL-001
+    name: recent-sim-swap
+    source_family: GSMA-Open-Gateway-CAMARA
+    data_type: telecom-event
+    use: account-security-and-fraud-prevention
+    interpretation: >
+      A recent SIM pairing change can increase risk in combination with other evidence.
+      It is not proof of fraud.
+    primary_source: https://open-gateway.gsma.com/docs/sim-swap
+
+  - id: FI-SIGNAL-TEL-002
+    name: number-verification
+    source_family: GSMA-Open-Gateway-CAMARA
+    data_type: network-verification
+    use: identity-and-transaction-assurance
+    interpretation: >
+      Network-based confirmation that the presented phone number corresponds to
+      the device/session can support account-security decisions.
+    primary_source: https://open-gateway.gsma.com/docs/number-verification
+
+  - id: FI-SIGNAL-TEL-003
+    name: recent-device-swap
+    source_family: GSMA-Open-Gateway-CAMARA
+    data_type: telecom-event
+    use: device-continuity
+    interpretation: >
+      Recent device association changes can be combined with transaction and
+      identity context as a risk signal.
+    primary_source: https://open-gateway.gsma.com/docs/device-swap
+
+  - id: FI-SIGNAL-TEL-004
+    name: scam-signal
+    source_family: GSMA-Open-Gateway
+    data_type: scam-risk-signal
+    use: impersonation-and-app-fraud-prevention
+    interpretation: >
+      Cross-sector signal intended to help protect customers from impersonation
+      scams. Availability depends on operator/provider implementation.
+    primary_source: https://www.gsma.com/solutions-and-impact/gsma-open-gateway/gsma-open-gateway-api-descriptions/

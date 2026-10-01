@@ -1,158 +1,23 @@
-version: "0.1"
+version: "0.2"
 last_verified: "2026-10-01"
 frameworks:
-  - id: mitre-f3
-    name: MITRE Fight Fraud Framework
-    kind: behavioral-knowledge-base
-    maintainer: Center for Threat-Informed Defense
-    scope: financial cyber fraud TTPs
-    status: active
-    maturity: published
-    source: https://ctid.mitre.org/categories/fraud
-    source_class: primary
-    confidence: confirmed
-    tags: [fraud, ttps, cyber-fraud]
-
-  - id: stripe-ft3
-    name: FT3 - Fraud Tools, Tactics, and Techniques
-    kind: vendor-open-framework
-    maintainer: Stripe
-    scope: fraud tactics, techniques, procedures, indicators, mitigations and detections
-    status: active
-    maturity: public-repository
-    source: https://github.com/stripe/ft3
-    source_class: primary
-    confidence: confirmed
-    tags: [fraud, payments, ttps]
-
-  - id: groupib-fraud-matrix
-    name: Group-IB Fraud Matrix 2.0
-    kind: vendor-framework
-    maintainer: Group-IB
-    scope: cross-industry digital fraud behavior, actors, campaigns, mitigations and detections
-    status: active
-    maturity: commercial
-    source: https://www.group-ib.com/products/fraud-protection/fraud-matrix/
-    source_class: primary
-    confidence: confirmed
-    tags: [fraud, actor, campaign]
-
-  - id: fist
-    name: Fraud Incident Structured Threat Framework
-    kind: academic-open-framework
-    maintainer: research authors
-    scope: fraud threat modeling including technical and social-engineering behavior
-    status: research
-    maturity: preprint
-    source: https://arxiv.org/abs/2506.05740
-    source_class: primary
-    confidence: confirmed
-    tags: [fraud, social-engineering, threat-modeling]
-
-  - id: mitre-attack
-    name: MITRE ATT&CK
-    kind: behavioral-knowledge-base
-    maintainer: MITRE
-    scope: cyber adversary tactics and techniques
-    status: active
-    maturity: mature
-    source: https://attack.mitre.org/
-    source_class: primary
-    confidence: confirmed
-    tags: [cyber, ttps]
-
-  - id: disarm
-    name: DISARM
-    kind: behavioral-framework
-    maintainer: DISARM Foundation
-    scope: information manipulation behavior
-    status: active
-    maturity: established
-    source: https://www.disarm.foundation/
-    source_class: primary
-    confidence: confirmed
-    tags: [influence, manipulation, deepfake]
-
-  - id: acfe-fraud-tree
-    name: ACFE Fraud Tree
-    kind: taxonomy
-    maintainer: Association of Certified Fraud Examiners
-    scope: occupational fraud
-    status: active
-    maturity: mature
-    source: https://www.acfe.com/fraud-resources/fraud-tree
-    source_class: primary
-    confidence: confirmed
-    tags: [occupational-fraud, taxonomy]
-
-  - id: coso-acfe-frmg
-    name: COSO/ACFE Fraud Risk Management Guide
-    kind: governance-guidance
-    maintainer: COSO and ACFE
-    scope: enterprise fraud risk management
-    status: active
-    maturity: second-edition-2023
-    source: https://www.acfe.com/fraud-resources/fraud-risk-tools---coso
-    source_class: primary
-    confidence: confirmed
-    tags: [governance, risk]
-
-  - id: epc-frida
-    name: FRaud Information Distribution Arrangement
-    kind: emerging-sharing-scheme
-    maintainer: European Payments Council
-    scope: inter-PSP fraud data sharing
-    status: consultation
-    maturity: rulebook-v0.1
-    source: https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/fraud-information-distribution-arrangement
-    source_class: primary
-    confidence: confirmed
-    tags: [sharing, payments, eu]
-
-  - id: meta-fire
-    name: Fraud Intelligence Reciprocal Exchange
-    kind: sharing-program
-    maintainer: Meta
-    scope: financial-institution and platform scam intelligence
-    status: operational
-    maturity: program
-    source: https://about.fb.com/news/2024/10/meta-partners-with-uk-banks-to-combat-scams/
-    source_class: primary
-    confidence: confirmed
-    tags: [sharing, scam, platform]
-
-  - id: gse
-    name: Global Signal Exchange
-    kind: cross-sector-sharing-network
-    maintainer: Oxford Information Labs, Google and GASA
-    scope: scam, fraud and abuse threat signals
-    status: operational
-    maturity: network
-    source: https://www.globalsignalexchange.org/about
-    source_class: primary
-    confidence: confirmed
-    tags: [sharing, signals, scams]
-
-  - id: bcb-res-conj-6-2023
-    name: Resolução Conjunta CMN/BCB nº 6/2023
-    kind: regulation
-    maintainer: CMN and Banco Central do Brasil
-    scope: sharing data and information on indications of fraud
-    status: in-force
-    maturity: regulation
-    source: https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=6&tipo=Resolu%C3%A7%C3%A3o+Conjunta
-    source_class: primary
-    confidence: confirmed
-    tags: [brazil, regulation, sharing]
-
-  - id: australia-spf
-    name: Scams Prevention Framework
-    kind: regulation-governance
-    maintainer: Australian Government / ACCC and sector regulators
-    scope: scam prevention, detection, disruption, reporting and response
-    status: staged-implementation
-    maturity: law-and-codes-in-development
-    source: https://www.accc.gov.au/about-us/scams-prevention-framework
-    source_class: primary
-    confidence: confirmed
-    tags: [australia, scam, regulation]
+  - {id: mitre-f3, name: MITRE Fight Fraud Framework, kind: behavioral-knowledge-base, maintainer: Center for Threat-Informed Defense, scope: financial cyber fraud TTPs, status: active, maturity: published, source: "https://ctid.mitre.org/categories/fraud", source_class: primary, confidence: confirmed, tags: [fraud, ttps]}
+  - {id: stripe-ft3, name: FT3 - Fraud Tools Tactics and Techniques, kind: vendor-open-framework, maintainer: Stripe, scope: fraud tactics and techniques, status: active, maturity: public-repository, source: "https://github.com/stripe/ft3", source_class: primary, confidence: confirmed, tags: [fraud, payments, ttps]}
+  - {id: groupib-fraud-matrix, name: Group-IB Fraud Matrix 2.0, kind: vendor-framework, maintainer: Group-IB, scope: digital fraud behavior and campaigns, status: active, maturity: commercial, source: "https://www.group-ib.com/products/fraud-protection/fraud-matrix/", source_class: primary, confidence: confirmed, tags: [fraud, campaign]}
+  - {id: fist, name: Fraud Incident Structured Threat Framework, kind: academic-open-framework, maintainer: research-authors, scope: fraud threat modeling and social engineering, status: research, maturity: preprint, source: "https://arxiv.org/abs/2506.05740", source_class: primary, confidence: confirmed, tags: [fraud, social-engineering]}
+  - {id: mitre-attack, name: MITRE ATT&CK, kind: behavioral-knowledge-base, maintainer: MITRE, scope: cyber adversary TTPs, status: active, maturity: mature, source: "https://attack.mitre.org/", source_class: primary, confidence: confirmed, tags: [cyber, ttps]}
+  - {id: disarm, name: DISARM, kind: behavioral-framework, maintainer: DISARM Foundation, scope: information manipulation, status: active, maturity: established, source: "https://www.disarm.foundation/", source_class: primary, confidence: confirmed, tags: [influence, manipulation]}
+  - {id: fed-fraudclassifier, name: Federal Reserve FraudClassifier, kind: classification-model, maintainer: Federal Reserve, scope: payment fraud classification, status: active, maturity: established, source: "https://www.federalreserve.gov/newsevents/pressreleases/other20200618a.htm", source_class: primary, confidence: confirmed, tags: [classification, payments]}
+  - {id: fed-scamclassifier, name: Federal Reserve ScamClassifier, kind: classification-model, maintainer: Federal Reserve Financial Services, scope: scam classification and reporting, status: active, maturity: established, source: "https://www.frbservices.org/education/federal-reserve-bank-webinars/scamclassifier-model-and-effective-scam-reporting/", source_class: primary, confidence: confirmed, tags: [classification, scam]}
+  - {id: nist-800-63-4, name: NIST SP 800-63-4 Digital Identity Guidelines, kind: identity-guidance, maintainer: NIST, scope: identity proofing authentication and federation, status: active, maturity: final-2025, source: "https://csrc.nist.gov/pubs/sp/800/63/4/final", source_class: primary, confidence: confirmed, tags: [identity, onboarding, authentication]}
+  - {id: owasp-oat, name: OWASP Automated Threats to Web Applications, kind: automation-taxonomy, maintainer: OWASP, scope: automated web abuse, status: active, maturity: lab-project, source: "https://owasp.org/projects/automated-threats-to-web-applications", source_class: primary, confidence: confirmed, tags: [bots, automation, fraud]}
+  - {id: mitre-atlas, name: MITRE ATLAS, kind: ai-threat-knowledge-base, maintainer: MITRE, scope: threats to and involving AI systems, status: active, maturity: established, source: "https://atlas.mitre.org/", source_class: primary, confidence: confirmed, tags: [ai, ttps]}
+  - {id: c2pa, name: C2PA Content Credentials, kind: provenance-standard, maintainer: C2PA, scope: digital-content provenance and authenticity, status: active, maturity: specification, source: "https://spec.c2pa.org/specifications/", source_class: primary, confidence: confirmed, tags: [provenance, deepfake, media]}
+  - {id: gsma-open-gateway, name: GSMA Open Gateway and CAMARA APIs, kind: network-api-standardization, maintainer: GSMA-CAMARA, scope: telecom network signals and capabilities, status: active, maturity: multi-release, source: "https://www.gsma.com/solutions-and-impact/gsma-open-gateway/gsma-open-gateway-api-descriptions/", source_class: primary, confidence: confirmed, tags: [telecom, signals, fraud]}
+  - {id: acfe-fraud-tree, name: ACFE Fraud Tree, kind: taxonomy, maintainer: ACFE, scope: occupational fraud, status: active, maturity: mature, source: "https://www.acfe.com/fraud-resources/fraud-tree", source_class: primary, confidence: confirmed, tags: [occupational-fraud]}
+  - {id: coso-acfe-frmg, name: COSO/ACFE Fraud Risk Management Guide, kind: governance-guidance, maintainer: COSO-ACFE, scope: enterprise fraud risk, status: active, maturity: second-edition-2023, source: "https://www.acfe.com/fraud-resources/fraud-risk-tools---coso", source_class: primary, confidence: confirmed, tags: [governance, risk]}
+  - {id: epc-frida, name: FRaud Information Distribution Arrangement, kind: emerging-sharing-scheme, maintainer: European Payments Council, scope: inter-PSP fraud information sharing, status: consultation, maturity: rulebook-v0.1, source: "https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/fraud-information-distribution-arrangement", source_class: primary, confidence: confirmed, tags: [sharing, eu]}
+  - {id: meta-fire, name: Fraud Intelligence Reciprocal Exchange, kind: sharing-program, maintainer: Meta, scope: bank-platform scam intelligence, status: operational, maturity: program, source: "https://about.fb.com/news/2024/10/meta-partners-with-uk-banks-to-combat-scams/", source_class: primary, confidence: confirmed, tags: [sharing, scam]}
+  - {id: gse, name: Global Signal Exchange, kind: cross-sector-sharing-network, maintainer: Oxford-Information-Labs-Google-GASA, scope: scam fraud and abuse signals, status: operational, maturity: network, source: "https://www.globalsignalexchange.org/about", source_class: primary, confidence: confirmed, tags: [sharing, signals]}
+  - {id: bcb-res-conj-6-2023, name: Resolução Conjunta CMN/BCB nº 6/2023, kind: regulation, maintainer: CMN-BCB, scope: fraud-indicator information sharing, status: in-force, maturity: regulation, source: "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=6&tipo=Resolu%C3%A7%C3%A3o+Conjunta", source_class: primary, confidence: confirmed, tags: [brazil, regulation, sharing]}
+  - {id: australia-spf, name: Scams Prevention Framework, kind: regulation-governance, maintainer: Australian-Government, scope: scam prevention and response, status: staged-implementation, maturity: law-and-codes-in-development, source: "https://www.accc.gov.au/about-us/scams-prevention-framework", source_class: primary, confidence: confirmed, tags: [australia, scam, regulation]}

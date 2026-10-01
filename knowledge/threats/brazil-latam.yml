@@ -1,0 +1,64 @@
+version: "0.2"
+last_verified: "2026-10-01"
+threats:
+  - id: FI-THREAT-BR-001
+    name: BraZetsu
+    class: malware-framework
+    associated_actor: FI-ACTOR-BR-003
+    confidence: high
+    status: active
+    source: https://www.group-ib.com/blog/brazetsu-ai-enhanced-iab-marketplace/
+    defensive_relevance:
+      - deep-host-reconnaissance
+      - financial-remittance-artifact-discovery
+      - digital-certificate-collection
+      - initial-access-broker-enablement
+
+  - id: FI-THREAT-BR-002
+    name: Prilex
+    class: pos-malware
+    associated_actor: FI-ACTOR-BR-004
+    confidence: confirmed
+    status: active
+    source: https://securelist.com/prilex-atm-pos-malware-evolution/107551/
+    defensive_relevance:
+      - pin-pad-communication-monitoring
+      - transaction-flow-integrity
+      - cryptogram-anomaly-analysis
+      - contactless-to-chip-shift-monitoring
+
+  - id: FI-THREAT-BR-003
+    name: GoPix
+    class: banking-trojan
+    confidence: confirmed
+    status: active
+    source: https://securelist.com.br/gopix-banking-trojan/1343/
+    defensive_relevance:
+      - memory-resident-behavior
+      - browser-network-manipulation
+      - payment-redirection
+      - malvertising-delivery
+
+  - id: FI-THREAT-GLOBAL-001
+    name: FASTCash
+    class: payment-switch-operation
+    associated_actor: FI-ACTOR-KP-001
+    confidence: confirmed
+    status: active
+    source: https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-239a
+    defensive_relevance:
+      - switch-host-integrity
+      - authorization-reconciliation
+      - payment-message-authentication
+
+  - id: FI-THREAT-ATM-001
+    name: Ploutus
+    class: atm-malware-family
+    confidence: confirmed
+    status: active
+    source: https://www.ic3.gov/CSA/2026/260219.pdf
+    defensive_relevance:
+      - atm-host-hardening
+      - removable-media-control
+      - dispense-authorization-reconciliation
+      - physical-logical-event-correlation

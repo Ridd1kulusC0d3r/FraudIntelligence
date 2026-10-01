@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FraudIntelligence Crosswalk",
+  "type": "object",
+  "required": ["id", "source", "target", "mapping", "rationale", "last_verified"],
+  "properties": {
+    "id": {"type": "string"},
+    "source": {
+      "type": "object",
+      "required": ["framework", "id"],
+      "properties": {
+        "framework": {"type": "string"},
+        "id": {"type": "string"},
+        "name": {"type": "string"}
+      }
+    },
+    "target": {
+      "type": "object",
+      "required": ["framework", "id"],
+      "properties": {
+        "framework": {"type": "string"},
+        "id": {"type": "string"},
+        "name": {"type": "string"}
+      }
+    },
+    "mapping": {"type": "string", "enum": ["exact","strong","partial","contextual","none"]},
+    "rationale": {"type": "string", "minLength": 10},
+    "evidence": {"type": "array", "items": {"type": "string", "format": "uri"}},
+    "reviewer": {"type": ["string","null"]},
+    "last_verified": {"type": "string", "format": "date"}
+  },
+  "additionalProperties": false
+}

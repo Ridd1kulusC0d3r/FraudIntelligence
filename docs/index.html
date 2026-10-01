@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FraudIntelligence Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">FRAUDINTELLIGENCE · v0.2</p>
+      <h1>Fraud Intelligence Navigator</h1>
+      <p>Frameworks, actors and threats in one searchable defensive knowledge view.</p>
+    </header>
+
+    <section class="controls">
+      <input id="search" type="search" placeholder="Search F3, BREEZE COMET, identity, Pix…">
+      <select id="type">
+        <option value="">All types</option>
+        <option value="reference">References</option>
+        <option value="actor">Actors</option>
+        <option value="threat">Threats</option>
+      </select>
+    </section>
+
+    <section class="stats">
+      <strong id="count">0</strong> visible knowledge objects
+    </section>
+
+    <section id="grid" class="grid"></section>
+
+    <footer>
+      Evidence first. Source-native concepts are preserved. A signal is not proof of guilt.
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -12,29 +12,52 @@ A claim can move into `knowledge/` when:
 5. claims are separated from vendor marketing;
 6. reproducibility or independent corroboration is documented where appropriate.
 
-## Current verification backlog
+## Promoted in v0.2
+
+Verified strongly enough for core inclusion:
+- Federal Reserve FraudClassifier / ScamClassifier;
+- NIST SP 800-63-4;
+- OWASP Automated Threats;
+- C2PA;
+- GSMA Open Gateway / CAMARA signals;
+- BREEZE COMET;
+- SLIM SPIDER;
+- Exilware / BraZetsu;
+- Prilex / GoPix;
+- FBI 2026 Ploutus/jackpotting resurgence.
+
+## Research-only / bounded
+
+### Emerging AI and OSINT
+- large-scale LLM deanonymization: track as privacy risk; do not operationalize mass re-identification;
+- MOSAIV and related multi-agent verification research;
+- Project Overwatch / Fusion Center as a cross-domain architecture pattern;
+- torrent-metadata profiling research with explicit legal/privacy caveats;
+- active underground-forum elicitation agents: research only, no autonomous impersonation implementation.
 
 ### Emerging agentic-fraud research
-- Transaction Trust Score / DACP
-- CogAgent
-- explainable multi-turn conversational scam detection systems
-- autonomous fraud-investigation architectures
-
-### Open-source projects
-- SentinelAI claims
-- Open-Source Fraud Intelligence Exchange claims
-- FraudLens / public fraud intelligence datasets
+- Transaction Trust Score / DACP;
+- CogAgent;
+- explainable multi-turn scam detection;
+- autonomous fraud-investigation architectures.
 
 ### Vendor platforms
-- Nyx / autonomous investigation performance claims
-- predictive-resilience and quantum-related fraud marketing claims
-- CFIP / distributed-tokenization architecture claims
+- autonomous investigation performance claims;
+- predictive-resilience / quantum-related marketing claims;
+- distributed-tokenization platform claims.
 
-### Policy / global initiatives
-- FATF 2026 fraud-typology work
-- UNODC 2026 fraud-summit outputs
-- India NSIRG status and authoritative documentation
-- ACAMS/GASA high-value fraud-data toolkit publications
+### Large regional actor lists
+
+The uploaded 55-item Brazil/LatAm list is treated as a candidate queue rather than a verified registry because it mixes:
+- actors;
+- aliases;
+- malware;
+- infrastructure;
+- campaigns;
+- duplicate entries;
+- vendor naming conventions.
+
+Each candidate must be normalized and sourced before promotion.
 
 ## Research template
 
@@ -52,4 +75,4 @@ reviewer:
 last_verified:
 ```
 
-If the only evidence is a press release repeating a product claim, record the claim as a claim.
+Interesting is not the same thing as established.

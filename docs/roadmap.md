@@ -1,82 +1,81 @@
 # Roadmap
 
-## v0.1 — Foundation
+## v0.1 — Foundation ✅
 
-- source registry;
-- layered architecture;
-- fraud-type taxonomy;
-- core object model;
-- JSON Schema;
-- Brazil layer;
-- ATM/PoS vertical;
-- initial detections;
-- CI validation;
-- research evidence gate.
+Core schema, source registry, Brazil layer, ATM/PoS vertical, initial detections and validation.
 
-## v0.2 — Crosswalk Engine
+## v0.2 — Intelligence Expansion ✅
 
-- ingest MITRE F3 public JSON;
-- ingest Stripe FT3 JSON;
-- reference ATT&CK STIX objects;
-- mapping schema with confidence + rationale;
-- coverage matrix: technique → observable → detection → control;
-- Navigator-style export;
-- tests preventing orphan IDs.
+- classification layer;
+- draft ScamClassifier-BR;
+- crime-science layer;
+- NIST identity/onboarding layer;
+- OWASP OAT automation layer;
+- MITRE ATLAS + C2PA AI/provenance layer;
+- CAMARA / GSMA telecom signals;
+- Brazil/LatAm curated threat landscape;
+- actor/threat registries;
+- FraudSignal and Crosswalk schemas;
+- F3 / FT3 upstream sync utility;
+- Navigator source under `docs/`;
+- research-only treatment for high-risk or weakly verified OSINT capabilities.
 
-## v0.3 — Case Intelligence
+## v0.3 — Crosswalk & Coverage Engine
 
-- case-library schema;
-- campaign and actor objects;
-- scam-journey representation;
-- manipulation-pattern vocabulary;
-- money-movement graph model;
-- anonymized sample cases;
-- graph exports.
+- parse synchronized F3/FT3 objects;
+- ATT&CK STIX references;
+- evidence-backed mappings;
+- semantic mapping review queue;
+- coverage matrix:
+  `technique → observable → telemetry → detection → control`;
+- orphan and stale-mapping tests;
+- Navigator coverage overlays.
 
-## v0.4 — Detection Library
+## v0.4 — Case Intelligence & Knowledge Graph
 
-- Sigma-compatible examples where appropriate;
-- SQL/KQL/Splunk-style pseudocode mappings;
+- case schema;
+- public case library;
+- actor/campaign/scheme graph;
+- money-movement graph;
+- time-aware edges;
+- GraphML / JSON exports;
+- entity-resolution confidence.
+
+## v0.5 — Detection Engineering
+
 - reconciliation analytics;
+- sequence-integrity analytics;
 - graph detections for mule networks;
 - missing-signal / absence analytics;
-- detection maturity scoring.
+- identity and telecom signals;
+- detection maturity scoring;
+- test datasets.
 
-## v0.5 — OSINT & Signal Fusion
+## v0.6 — Signal Exchange
 
-- passive-source catalog;
-- source reliability model;
-- entity resolution;
-- temporal clustering;
-- infrastructure and beneficiary relationships;
-- trend and campaign summaries;
-- provenance-preserving enrichment.
+- FraudSignal feedback lifecycle;
+- confidence updates;
+- share / revoke semantics;
+- STIX/MISP interoperability research;
+- FRIDA readiness mapping;
+- Brazil sharing model.
 
-## v0.6 — Fraud Knowledge Graph
-
-- STIX 2.1 extension research;
-- MISP interoperability research;
-- graph schema;
-- typed relationships;
-- deduplication;
-- temporal and confidence-aware edges.
-
-## v0.7 — AI Interface
+## v0.7 — AI Analyst Interface
 
 - retrieval-optimized knowledge chunks;
-- MCP-compatible read-only knowledge service;
-- grounded classification of fraud reports;
-- evidence citations;
-- analyst-in-the-loop review;
-- no autonomous high-impact decisioning.
+- read-only MCP interface;
+- grounded classification;
+- source citations;
+- analyst approval;
+- bounded automation;
+- append-only decision logs.
 
-## v1.0 — Public Intelligence Platform
+## v1.0 — Public Fraud Intelligence Platform
 
-- versioned knowledge releases;
 - stable schema;
-- public web explorer;
-- framework crosswalks;
+- interactive explorer;
+- versioned datasets;
 - coverage dashboards;
 - regional packs;
-- contribution governance;
-- reproducible research datasets where lawful.
+- reproducible research;
+- community governance.
