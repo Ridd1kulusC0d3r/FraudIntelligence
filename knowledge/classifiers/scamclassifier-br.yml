@@ -1,0 +1,61 @@
+version: "0.1-draft"
+id: scamclassifier-br
+name: ScamClassifier-BR
+status: draft
+last_verified: "2026-10-01"
+purpose: >
+  Open project taxonomy for consistent Brazilian scam classification.
+  Inspired by public fraud/scam classification models but not endorsed by them.
+principles:
+  - descriptive_not_accusatory
+  - separate_classification_from_ttp_mapping
+  - preserve_unknown_values
+  - do_not_profile_protected_attributes
+
+dimensions:
+  authorization:
+    values:
+      - authorized-by-customer
+      - unauthorized
+      - access-surrendered
+      - unknown
+  mechanism:
+    values:
+      - impersonation
+      - relationship-or-trust
+      - goods-or-services
+      - investment
+      - account-takeover
+      - malware-or-device
+      - merchant-or-refund-abuse
+      - identity
+      - insider
+      - other
+  impersonation:
+    values:
+      - bank
+      - government
+      - business
+      - family-or-friend
+      - professional
+      - marketplace
+      - none
+      - unknown
+  channel:
+    multi: true
+    values: [voice, messaging, email, social, web, mobile-app, physical, multi-channel, other]
+  payment_rail:
+    multi: true
+    values: [pix, card, boleto, bank-transfer, cash, crypto, wallet, other, unknown]
+  outcome:
+    values: [attempted, successful-loss, blocked, recovered, unknown]
+
+examples:
+  - label: fake-bank-support-pix
+    classification:
+      authorization: authorized-by-customer
+      mechanism: impersonation
+      impersonation: bank
+      channel: [voice, messaging]
+      payment_rail: [pix]
+      outcome: successful-loss

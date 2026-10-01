@@ -14,11 +14,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Install validation dependencies
         run: python -m pip install -r requirements-dev.txt
+
       - name: Validate YAML and JSON Schema
         run: python tools/validate_knowledge.py
+
+      - name: Rebuild Navigator catalog
+        run: python tools/build_catalog.py
+
+      - name: Ensure generated catalog is current
+        run: git diff --exit-code -- docs/data/catalog.json
