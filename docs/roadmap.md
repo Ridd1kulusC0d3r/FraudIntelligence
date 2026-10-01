@@ -6,42 +6,60 @@ Core schema, source registry, Brazil layer, ATM/PoS vertical, initial detections
 
 ## v0.2 — Intelligence Expansion ✅
 
-- classification layer;
-- draft ScamClassifier-BR;
-- crime-science layer;
-- NIST identity/onboarding layer;
-- OWASP OAT automation layer;
-- MITRE ATLAS + C2PA AI/provenance layer;
-- CAMARA / GSMA telecom signals;
-- Brazil/LatAm curated threat landscape;
-- actor/threat registries;
-- FraudSignal and Crosswalk schemas;
-- F3 / FT3 upstream sync utility;
-- Navigator source under `docs/`;
-- research-only treatment for high-risk or weakly verified OSINT capabilities.
+Classification, crime science, identity/onboarding, automated abuse, AI/provenance, telecom signals, Brazil/LatAm landscape, actor/threat registries, FraudSignal/Crosswalk schemas and upstream F3/FT3 sync.
 
-## v0.3 — Crosswalk & Coverage Engine
+## v0.3 — Intelligence Radar & Operating Model 🚧
+
+### Delivered
+- visual Threat Actor Radar;
+- global financial actor registry;
+- APT38 / Lazarus attribution separation;
+- machine-readable Priority Intelligence Requirements;
+- Intelligence Tradecraft doctrine;
+- scalable multi-file actor/threat catalog build;
+- richer Navigator metadata.
+
+### Next
+- source reliability / credibility model;
+- hypothesis + alternatives schema;
+- campaign objects with temporal bounds;
+- indicators/signposts and watch-and-warning objects;
+- collection-plan coverage per PIR;
+- TLP 2.0 markings.
+
+## v0.4 — Crosswalk & Detection Coverage Engine
 
 - parse synchronized F3/FT3 objects;
 - ATT&CK STIX references;
+- ATT&CK Detection Strategies and Data Components;
 - evidence-backed mappings;
-- semantic mapping review queue;
+- D3FEND countermeasure links;
 - coverage matrix:
-  `technique → observable → telemetry → detection → control`;
+  `actor/campaign → technique → observable → telemetry → detection → control`;
 - orphan and stale-mapping tests;
 - Navigator coverage overlays.
 
-## v0.4 — Case Intelligence & Knowledge Graph
+## v0.5 — Case Intelligence & Knowledge Graph
 
-- case schema;
+- case and campaign schemas;
 - public case library;
-- actor/campaign/scheme graph;
+- actor/campaign/scheme/infrastructure graph;
 - money-movement graph;
 - time-aware edges;
-- GraphML / JSON exports;
-- entity-resolution confidence.
+- entity-resolution confidence;
+- GraphML / JSON exports.
 
-## v0.5 — Detection Engineering
+## v0.6 — CTI Interoperability & Signal Exchange
+
+- STIX 2.1 export;
+- TAXII 2.1 research/service;
+- MISP interoperability;
+- FraudSignal feedback lifecycle;
+- confidence updates;
+- share/revoke semantics;
+- FRIDA readiness mapping.
+
+## v0.7 — Detection Engineering
 
 - reconciliation analytics;
 - sequence-integrity analytics;
@@ -51,16 +69,7 @@ Core schema, source registry, Brazil layer, ATM/PoS vertical, initial detections
 - detection maturity scoring;
 - test datasets.
 
-## v0.6 — Signal Exchange
-
-- FraudSignal feedback lifecycle;
-- confidence updates;
-- share / revoke semantics;
-- STIX/MISP interoperability research;
-- FRIDA readiness mapping;
-- Brazil sharing model.
-
-## v0.7 — AI Analyst Interface
+## v0.8 — AI Analyst Interface
 
 - retrieval-optimized knowledge chunks;
 - read-only MCP interface;
@@ -78,4 +87,5 @@ Core schema, source registry, Brazil layer, ATM/PoS vertical, initial detections
 - coverage dashboards;
 - regional packs;
 - reproducible research;
-- community governance.
+- community governance;
+- intelligence product generation.

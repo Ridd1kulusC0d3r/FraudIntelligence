@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FraudIntelligence Requirement",
+  "type": "object",
+  "required": ["id", "title", "priority", "status", "decision_supported", "key_questions", "collection_requirements", "outputs"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^(PIR|IR)-[A-Z0-9-]+$"},
+    "title": {"type": "string", "minLength": 3},
+    "priority": {"type": "string", "enum": ["critical", "high", "medium", "low"]},
+    "status": {"type": "string", "enum": ["active", "satisfied", "paused", "retired"]},
+    "decision_supported": {"type": "string", "minLength": 10},
+    "key_questions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "collection_requirements": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "outputs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "owner": {"type": ["string", "null"]},
+    "review_cycle_days": {"type": ["integer", "null"], "minimum": 1}
+  },
+  "additionalProperties": false
+}

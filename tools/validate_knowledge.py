@@ -40,12 +40,46 @@ def validate_json_schemas() -> list[str]:
     return errors
 
 
-def validate_registry(path: pathlib.Path, key: str, required: set[str]) -> list[str]:
+def validate_registry_files(
+    paths: list[pathlib.Path],
+    key: str,
+    required: set[str],
+) -> list[str]:
     errors: list[str] = []
-    data = load_yaml(path) or {}
-    seen: set[str] = set()
+    seen: dict[str, pathlib.Path] = {}
 
-    for index, item in enumerate(data.get(key, [])):
+    for path in paths:
+        data = load_yaml(path) or {}
+        for index, item in enumerate(data.get(key, [])):
+            missing = sorted(required - set(item))
+            if missing:
+                errors.append(f"{path}:{index}: missing {missing}")
+
+            item_id = item.get("id")
+            if item_id in seen:
+                errors.append(
+                    f"{path}:{index}: duplicate id {item_id}; first seen in {seen[item_id]}"
+                )
+            elif item_id:
+                seen[item_id] = path
+
+            source = item.get("source")
+            if source and not source.startswith("https://"):
+                errors.append(f"{path}:{index}: source must use https")
+
+    return errors
+
+
+def validate_requirements() -> list[str]:
+    path = ROOT / "knowledge" / "intelligence-requirements.yml"
+    data = load_yaml(path) or {}
+    required = {
+        "id", "title", "priority", "status", "decision_supported",
+        "key_questions", "collection_requirements", "outputs"
+    }
+    errors: list[str] = []
+    seen: set[str] = set()
+    for index, item in enumerate(data.get("requirements", [])):
         missing = sorted(required - set(item))
         if missing:
             errors.append(f"{path}:{index}: missing {missing}")
@@ -53,30 +87,32 @@ def validate_registry(path: pathlib.Path, key: str, required: set[str]) -> list[
         if item_id in seen:
             errors.append(f"{path}:{index}: duplicate id {item_id}")
         seen.add(item_id)
-        source = item.get("source")
-        if source and not source.startswith("https://"):
-            errors.append(f"{path}:{index}: source must use https")
     return errors
 
 
 def main() -> int:
     errors = validate_yaml_files()
     errors.extend(validate_json_schemas())
-    errors.extend(validate_registry(
-        ROOT / "knowledge" / "frameworks.yml",
+
+    errors.extend(validate_registry_files(
+        [ROOT / "knowledge" / "frameworks.yml"],
         "frameworks",
         {"id","name","kind","scope","status","source","source_class","confidence"},
     ))
-    errors.extend(validate_registry(
-        ROOT / "knowledge" / "actors" / "brazil-latam.yml",
+
+    errors.extend(validate_registry_files(
+        sorted((ROOT / "knowledge" / "actors").glob("*.yml")),
         "actors",
-        {"id","name","type","status","confidence","source"},
+        {"id","name","type","region","status","confidence","source"},
     ))
-    errors.extend(validate_registry(
-        ROOT / "knowledge" / "threats" / "brazil-latam.yml",
+
+    errors.extend(validate_registry_files(
+        sorted((ROOT / "knowledge" / "threats").glob("*.yml")),
         "threats",
         {"id","name","class","status","confidence","source"},
     ))
+
+    errors.extend(validate_requirements())
 
     if errors:
         for error in errors:
