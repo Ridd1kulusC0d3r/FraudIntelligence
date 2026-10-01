@@ -1,0 +1,22 @@
+id: FI-DET-SEQ-001
+name: High-risk account change followed by rapid value transfer
+status: draft
+confidence: medium
+hypothesis: >
+  A sensitive account or beneficiary change followed quickly by a high-value
+  transfer from a new device may represent account takeover or induced payment.
+data_sources: [identity_events, device_events, beneficiary_events, transaction_events]
+logic:
+  sequence:
+    - sensitive_account_or_beneficiary_change
+    - new_or_low_trust_device
+    - outbound_value_transfer
+  max_window_minutes: 30
+false_positives:
+  - legitimate_device_replacement
+  - planned_beneficiary_setup_and_payment
+  - customer_support_assisted_change
+response: [step_up_verification, analyst_review, preserve_session_evidence, evaluate_related_entities]
+privacy:
+  note: Use minimum necessary data and avoid protected-attribute profiling.
+last_verified: "2026-10-01"

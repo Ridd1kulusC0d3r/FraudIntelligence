@@ -1,0 +1,62 @@
+version: "0.1"
+object_types:
+  actor:
+    description: Individual, group or organization associated with fraud activity.
+  campaign:
+    description: Time-bounded or thematically linked set of fraud activity.
+  scheme:
+    description: Fraud scenario or business logic used to obtain value.
+  journey:
+    description: Ordered progression of a fraud or scam operation.
+  tactic:
+    description: High-level actor objective from a source framework.
+  technique:
+    description: Behavior used to accomplish an objective.
+  procedure:
+    description: Observed implementation of a technique.
+  manipulation_pattern:
+    description: Victim-facing influence or social-engineering mechanism.
+  observable:
+    description: Measurable signal in telemetry, content, transactions or infrastructure.
+  detection:
+    description: Analytic logic that evaluates one or more observables.
+  control:
+    description: Preventive, detective, disruptive or recovery measure.
+  identity:
+    description: Person or organization identity representation.
+  account:
+    description: Financial, platform, messaging or service account.
+  device:
+    description: Endpoint, mobile device, browser or hardware endpoint.
+  channel:
+    description: Communication or transaction channel.
+  transaction:
+    description: Transfer or attempted transfer of value.
+  beneficiary:
+    description: Recipient of value.
+  mule:
+    description: Account or participant used in movement or cash-out of illicit proceeds.
+  infrastructure:
+    description: Domain, URL, IP, hosting, telecom or other operational infrastructure.
+  regulation:
+    description: Legal or regulatory requirement relevant to fraud controls or sharing.
+  source:
+    description: Evidence source supporting a claim.
+
+relationship_types:
+  - attributed-to
+  - part-of
+  - uses
+  - targets
+  - observed-in
+  - communicates-via
+  - controls
+  - transacts-with
+  - benefits
+  - maps-to
+  - detected-by
+  - mitigated-by
+  - governed-by
+  - supported-by
+  - contradicts
+  - supersedes

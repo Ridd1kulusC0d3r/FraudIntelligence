@@ -1,0 +1,25 @@
+version: "0.1"
+taxonomy_note: >
+  Project navigation taxonomy; not a replacement for MITRE F3, FT3,
+  ACFE Fraud Tree, FATF typologies or regulator classifications.
+fraud_types:
+  - {id: FI-FT-001, name: Account Takeover, domain: identity-and-access}
+  - {id: FI-FT-002, name: Authorized Push Payment / Authorized Transfer Scam, domain: payments}
+  - {id: FI-FT-003, name: Identity Fraud, domain: identity-and-access}
+  - {id: FI-FT-004, name: Synthetic Identity Fraud, domain: identity-and-access}
+  - {id: FI-FT-005, name: Card-Present Fraud, domain: cards}
+  - {id: FI-FT-006, name: Card-Not-Present Fraud, domain: cards}
+  - {id: FI-FT-007, name: Merchant Fraud, domain: commerce}
+  - {id: FI-FT-008, name: Refund / Chargeback Abuse, domain: commerce}
+  - {id: FI-FT-009, name: Mule Network Abuse, domain: money-movement}
+  - {id: FI-FT-010, name: Impersonation Scam, domain: scams}
+  - {id: FI-FT-011, name: Investment Scam, domain: scams}
+  - {id: FI-FT-012, name: Romance / Relationship Scam, domain: scams}
+  - {id: FI-FT-013, name: Business Email Compromise, domain: scams}
+  - {id: FI-FT-014, name: Marketplace Scam, domain: commerce}
+  - {id: FI-FT-015, name: Loan / Credit Fraud, domain: lending}
+  - {id: FI-FT-016, name: Insurance Fraud, domain: insurance}
+  - {id: FI-FT-017, name: Occupational / Insider Fraud, domain: enterprise}
+  - {id: FI-FT-018, name: ATM / PoS Fraud, domain: payment-infrastructure}
+  - {id: FI-FT-019, name: Telecom-Enabled Fraud, domain: telecom}
+  - {id: FI-FT-020, name: AI / Deepfake-Enabled Impersonation, domain: scams}

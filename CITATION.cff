@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: FraudIntelligence
+message: "If you use this project in research, cite the repository and upstream primary sources for referenced frameworks."
+type: software
+authors:
+  - family-names: Lourenço
+    given-names: Deivison
+repository-code: https://github.com/Ridd1kulusC0d3r/FraudIntelligence
+url: https://github.com/Ridd1kulusC0d3r/FraudIntelligence
+license: MIT
+version: 0.1.0
+date-released: 2026-10-01

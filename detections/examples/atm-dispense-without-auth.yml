@@ -1,0 +1,26 @@
+id: FI-DET-ATM-001
+name: ATM dispense without matching switch authorization
+status: draft
+confidence: high
+hypothesis: >
+  A cash-dispense event without a matching authorized transaction within the
+  expected time window may indicate jackpotting, switch manipulation, telemetry
+  failure or another high-severity control break.
+data_sources: [atm_electronic_journal, xfs_middleware, payment_switch]
+logic:
+  join_key: transaction_id
+  time_tolerance_seconds: 300
+  condition: dispense_exists AND matching_authorization_missing
+false_positives:
+  - maintenance_or_diagnostic_dispense
+  - delayed_or_missing_switch_telemetry
+  - reconciliation_key_mismatch
+response:
+  - preserve relevant ATM and switch logs
+  - verify maintenance state
+  - reconcile cash position
+  - escalate for fraud and cyber investigation
+mappings:
+  - {framework: mitre-f3, relation: contextual}
+  - {framework: mitre-attack, relation: contextual}
+last_verified: "2026-10-01"
