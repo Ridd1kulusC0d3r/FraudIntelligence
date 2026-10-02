@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FraudIntelligence Detection Coverage Record",
+  "type": "object",
+  "required": ["id","subject_ref","behavior","observable","telemetry","analytics","controls","coverage","maturity","last_reviewed"],
+  "properties": {
+    "id": {"type":"string","pattern":"^FI-COV-[A-Z0-9-]+$"},
+    "subject_ref": {"type":"string"},
+    "behavior": {"type":"object"},
+    "observable": {"type":"array","items":{"type":"string"}},
+    "telemetry": {"type":"array","items":{"type":"string"}},
+    "attack_data_components": {"type":"array","items":{"type":"object"}},
+    "attack_detection_strategies": {"type":"array","items":{"type":"object"}},
+    "analytics": {"type":"array","items":{"type":"string"}},
+    "controls": {"type":"array","items":{"type":"string"}},
+    "d3fend": {"type":"array","items":{"type":"object"}},
+    "coverage": {"type":"string","enum":["covered","partial","gap"]},
+    "maturity": {"type":"string","enum":["concept","draft","tested","operational"]},
+    "last_reviewed": {"type":"string","format":"date"},
+    "notes": {"type":"string"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,34 @@
+version: "0.1"
+last_verified: "2026-10-01"
+hypotheses:
+  - id: HYP-BR-BC-001
+    pir_id: PIR-BR-001
+    statement: >
+      BREEZE COMET is likely to continue prioritizing privileged identity,
+      cloud/CI-CD secrets and mTLS-linked access paths because they can bridge
+      enterprise compromise to payment execution.
+    status: active
+    confidence: medium
+    supporting_evidence:
+      - source: https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil
+        assessment: >
+          GTIG reports targeting of CI/CD credentials, cloud tokens, mTLS
+          credentials and systems able to conduct Pix, STR and Boleto transactions.
+    contradicting_evidence: []
+    alternatives:
+      - id: ALT-BR-BC-001
+        statement: >
+          The observed cloud and CI/CD focus is opportunistic rather than a stable
+          strategic preference and may decline as defensive controls improve.
+      - id: ALT-BR-BC-002
+        statement: >
+          The actor may increasingly seek indirect access through fintech,
+          payment processors or software providers instead of direct compromise.
+    signposts:
+      - repeated public reporting of payment-provider or banking-software targeting
+      - repeated targeting of CI/CD, cloud secrets or certificate material
+      - new campaigns linking enterprise access to authenticated payment interfaces
+    what_would_change_our_mind:
+      - sustained operations using materially different access paths with no privileged-identity or payment-interface focus
+      - reliable reporting showing the observed pattern belonged to a separate actor cluster
+    last_reviewed: "2026-10-01"

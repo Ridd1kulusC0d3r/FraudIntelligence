@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FraudIntelligence Analytic Hypothesis",
+  "type": "object",
+  "required": ["id","pir_id","statement","status","confidence","supporting_evidence","alternatives","signposts","what_would_change_our_mind","last_reviewed"],
+  "properties": {
+    "id": {"type":"string","pattern":"^HYP-[A-Z0-9-]+$"},
+    "pir_id": {"type":"string"},
+    "statement": {"type":"string","minLength":20},
+    "status": {"type":"string","enum":["active","supported","weakened","rejected","retired"]},
+    "confidence": {"type":"string","enum":["high","medium","low"]},
+    "supporting_evidence": {"type":"array","items":{"type":"object","required":["source","assessment"],"properties":{"source":{"type":"string","format":"uri"},"assessment":{"type":"string"}}}},
+    "contradicting_evidence": {"type":"array","items":{"type":"object"}},
+    "alternatives": {"type":"array","minItems":1,"items":{"type":"object","required":["id","statement"],"properties":{"id":{"type":"string"},"statement":{"type":"string"}}}},
+    "signposts": {"type":"array","minItems":1,"items":{"type":"string"}},
+    "what_would_change_our_mind": {"type":"array","minItems":1,"items":{"type":"string"}},
+    "last_reviewed": {"type":"string","format":"date"}
+  },
+  "additionalProperties": false
+}

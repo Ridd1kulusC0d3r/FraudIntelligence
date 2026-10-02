@@ -1,0 +1,43 @@
+version: "0.1"
+last_verified: "2026-10-01"
+watch_items:
+  - id: WW-BR-001
+    title: Escalation toward Brazilian payment-authorization infrastructure
+    pir_id: PIR-BR-001
+    hypothesis_refs: [HYP-BR-BC-001]
+    severity: critical
+    status: watching
+    signposts:
+      - credible reporting of new compromises involving payment processors or banking-software providers
+      - new evidence of cloud, CI/CD, certificate or mTLS credential targeting linked to financial execution
+      - observed transition from enterprise access to payment-interface activity
+    threshold: >
+      Trigger when one confirmed organization-specific event or two independent
+      public signposts appear inside a 30-day analytical window.
+    actions:
+      - refresh actor and campaign assessment
+      - review affected telemetry and detection coverage
+      - validate credential, certificate and payment-interface controls
+      - publish a watch-and-warning update with explicit confidence
+    tlp: TLP:CLEAR
+    last_reviewed: "2026-10-01"
+
+  - id: WW-AI-001
+    title: Agentic AI materially changes fraud or OSINT operating scale
+    pir_id: PIR-AI-001
+    hypothesis_refs: []
+    severity: medium
+    status: watching
+    signposts:
+      - reproducible research showing autonomous multi-step fraud capability
+      - incident reporting showing autonomous agent behavior in real operations
+      - measurable reduction in cost or time for evidence-backed targeting or scam orchestration
+    threshold: >
+      Trigger only when primary research is reproducible or a real incident is
+      independently corroborated; demonstrations alone remain research signals.
+    actions:
+      - update AI capability assessment
+      - identify changed defensive assumptions
+      - review provenance, analyst-safety and automation controls
+    tlp: TLP:CLEAR
+    last_reviewed: "2026-10-01"

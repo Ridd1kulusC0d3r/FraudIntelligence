@@ -1,6 +1,6 @@
 # Intelligence Tradecraft
 
-**Status:** v0.3 operating-model foundation  
+**Status:** v0.4 operational intelligence model  
 **Last reviewed:** 2026-10-01
 
 FraudIntelligence should not become a museum of threat names. Intelligence exists to reduce uncertainty for a decision.
@@ -29,7 +29,7 @@ These are different concepts.
 
 A prestigious source can still make a low-confidence attribution. Multiple mediocre sources repeating one another do not create independent corroboration.
 
-The project should evolve toward an explicit source-evaluation model while keeping the current claim-confidence field.
+The project now implements an explicit source-evaluation model in `knowledge/source-assessments.yml` while keeping claim confidence separate.
 
 Reference: ODNI ICD 203 Analytic Standards  
 https://www.dni.gov/files/documents/ICD/ICD-203.pdf
@@ -38,7 +38,7 @@ https://www.dni.gov/files/documents/ICD/ICD-203.pdf
 
 Actor attribution should be represented as competing hypotheses, not just a string field.
 
-Future objects should support:
+Objects now support:
 
 ```yaml
 hypothesis:
@@ -70,7 +70,7 @@ The graph needs:
 
 ## 5. Campaign layer
 
-The biggest structural gap is now **campaign intelligence**.
+**Campaign intelligence is now a first-class object.**
 
 An actor profile answers *who*. A campaign object should answer:
 
@@ -81,11 +81,11 @@ An actor profile answers *who*. A campaign object should answer:
 - with what objective;
 - with what observable changes over time.
 
-This should become the bridge between actor knowledge and detections.
+Campaigns are now the bridge between actor knowledge, hypotheses, warnings and detections.
 
 ## 6. Collection management
 
-Every PIR should map to:
+Every PIR can now map to a machine-readable collection plan containing:
 - required sources;
 - existing coverage;
 - collection gaps;
@@ -117,7 +117,7 @@ Primary references:
 
 ## 8. Exchange standards
 
-The internal graph should be exportable rather than trapped in project-specific YAML.
+The internal graph is now exportable rather than trapped in project-specific YAML.
 
 Targets:
 - **STIX 2.1** for CTI objects and relationships;
@@ -143,7 +143,7 @@ TLP controls sharing boundaries; it is not a confidence score.
 
 ## 10. Intelligence products
 
-A mature repository should generate reproducible products from the same knowledge graph:
+The repository now includes an initial product factory that generates reproducible products from the same knowledge graph:
 
 - Threat Actor Profile;
 - Campaign Brief;

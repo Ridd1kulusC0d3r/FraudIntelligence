@@ -21,3 +21,7 @@ sources:
   - {id: SRC-OASIS-TAXII21, title: TAXII 2.1, publisher: OASIS, url: "https://www.oasis-open.org/standard/taxii-version-2-1/", class: standards-primary}
   - {id: SRC-FIRST-TLP20, title: TLP 2.0, publisher: FIRST, url: "https://www.first.org/tlp/", class: standards-primary}
   - {id: SRC-MITRE-D3FEND, title: MITRE D3FEND, publisher: MITRE, url: "https://d3fend.mitre.org/", class: primary-knowledge-base}
+  - {id: SRC-GTIG-BREEZE-COMET, title: Financially Motivated Threat Actor BREEZE COMET Targets Brazil, publisher: Google Threat Intelligence Group, url: "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil", class: vendor-primary}
+  - {id: SRC-MITRE-ATTACK, title: MITRE ATT&CK, publisher: MITRE, url: "https://attack.mitre.org/", class: primary-knowledge-base}
+  - {id: SRC-ATTACK-DET, title: ATT&CK Detection Strategies, publisher: MITRE, url: "https://attack.mitre.org/detectionstrategies/", class: primary-knowledge-base}
+  - {id: SRC-ATTACK-DC, title: ATT&CK Data Components, publisher: MITRE, url: "https://attack.mitre.org/datacomponents/", class: primary-knowledge-base}

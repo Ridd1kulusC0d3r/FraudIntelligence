@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img alt="release" src="https://img.shields.io/badge/release-v0.3%20Intelligence%20Radar-2563eb">
+  <img alt="release" src="https://img.shields.io/badge/release-v0.4%20Intelligence%20Operations-2563eb">
   <img alt="knowledge" src="https://img.shields.io/badge/knowledge-evidence--first-16a34a">
   <img alt="actors" src="https://img.shields.io/badge/threat%20actors-11-7c3aed">
   <img alt="frameworks" src="https://img.shields.io/badge/core%20references-20-0891b2">
@@ -120,6 +120,25 @@ payment authorization & infrastructure targeting
 
 High-priority clusters include **BREEZE COMET**, **SLIM SPIDER**, **Exilware/BraZetsu**, **Prilex**, **GoPix**, **APT38/FASTCash** and the current **Ploutus** ATM-jackpotting resurgence.
 
+## 🧠 Intelligence Operations v0.4
+
+The repository now implements the operational intelligence loop:
+
+**PIR → collection plan → source assessment → hypothesis → campaign → watch & warning → detection coverage → intelligence product → exchange → feedback**
+
+New machine-readable layers:
+- campaigns with temporal bounds and actor relationships;
+- competing hypotheses with explicit alternatives and falsification criteria;
+- signposts and Watch & Warning thresholds;
+- collection plans mapped to PIRs and collection gaps;
+- source-quality assessment separated from analytic confidence;
+- ATT&CK Detection Strategy / Data Component crosswalks plus D3FEND controls;
+- STIX 2.1 export and TAXII-ready public collection packaging;
+- product factory for Campaign Briefs, Watch & Warning, Detection Coverage and Collection Gap reports;
+- graph export for actor → campaign → hypothesis → warning → PIR relationships.
+
+See [Intelligence Operations](docs/intelligence-operations.md), [Source Evaluation](docs/source-evaluation.md), [Watch & Warning](docs/watch-warning.md) and [Interoperability](docs/interoperability.md).
+
 ## 🔬 Current capabilities
 
 - **ScamClassifier-BR** for Brazilian scam classification;
@@ -131,8 +150,9 @@ High-priority clusters include **BREEZE COMET**, **SLIM SPIDER**, **Exilware/Bra
 - Brazil/LatAm + global financial threat-actor registries;
 - FraudSignal and Crosswalk JSON Schemas;
 - F3/FT3 upstream synchronization and change watching;
-- interactive Navigator data source;
-- defensive OSINT research with an evidence gate.
+- interactive Navigator covering actors, campaigns, PIRs, warnings, threats and references;
+- defensive OSINT research with an evidence gate;
+- executable coverage, graph, STIX/TAXII and intelligence-product builders.
 
 ## 🧠 Intelligence requirements
 

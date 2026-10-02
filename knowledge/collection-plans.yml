@@ -1,0 +1,52 @@
+version: "0.1"
+last_verified: "2026-10-01"
+collection_plans:
+  - id: CP-BR-001
+    pir_id: PIR-BR-001
+    status: active
+    coverage: partial
+    requirements:
+      - id: CR-BR-001
+        question: Which actors are targeting Brazilian payment authorization or adjacent infrastructure?
+        source_types: [vendor-primary, government, mitre-attack, incident-reporting]
+        cadence: weekly
+        handling: TLP:CLEAR
+      - id: CR-BR-002
+        question: Which behaviors bridge cloud, CI/CD or privileged identity into payment execution?
+        source_types: [vendor-primary, detection-telemetry, incident-reporting]
+        cadence: weekly
+        handling: TLP:CLEAR
+      - id: CR-BR-003
+        question: Which mapped behaviors have observable, telemetry and tested analytic coverage?
+        source_types: [framework-data, detection-inventory, control-inventory]
+        cadence: on-change
+        handling: TLP:CLEAR
+    gaps:
+      - standardized campaign-level temporal linkage
+      - validated mappings from payment behaviors to ATT&CK detection strategies
+      - broader evidence for mTLS and CI/CD control effectiveness
+    legal_privacy_notes:
+      - public collection only in the open repository
+      - internal telemetry should remain outside the public repository unless sanitized
+      - do not profile protected attributes or infer criminality from a single signal
+    review_cycle_days: 30
+    last_reviewed: "2026-10-01"
+
+  - id: CP-AI-001
+    pir_id: PIR-AI-001
+    status: active
+    coverage: partial
+    requirements:
+      - id: CR-AI-001
+        question: Which agentic fraud or OSINT capabilities are reproducible and evidence-backed?
+        source_types: [peer-reviewed-research, reproducible-preprint, incident-reporting, vendor-primary]
+        cadence: monthly
+        handling: TLP:CLEAR
+    gaps:
+      - limited independent replication for many agentic-system claims
+      - inconsistent distinction between demonstration and real-world operation
+    legal_privacy_notes:
+      - do not operationalize mass deanonymization against private individuals
+      - active undercover interaction remains research-only
+    review_cycle_days: 30
+    last_reviewed: "2026-10-01"

@@ -1,6 +1,6 @@
 {
-  "version": "0.3",
-  "count": 36,
+  "version": "0.4",
+  "count": 44,
   "items": [
     {
       "id": "FI-ACTOR-KP-001",
@@ -163,6 +163,17 @@
       "confidence": "confirmed",
       "featured": true,
       "aliases": []
+    },
+    {
+      "id": "FI-CAM-BR-BC-2024-2026",
+      "name": "BREEZE COMET payment-infrastructure campaign cluster",
+      "type": "campaign",
+      "category": "campaign",
+      "scope": "Obtain durable access to organizations and systems able to execute or support fraudulent transfers through Brazilian payment infrastructure.",
+      "status": "active",
+      "source": "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil",
+      "region": "Brazil / Latin-America",
+      "confidence": "confirmed"
     },
     {
       "id": "acfe-fraud-tree",
@@ -345,6 +356,51 @@
       "source": "https://www.accc.gov.au/about-us/scams-prevention-framework"
     },
     {
+      "id": "PIR-DET-001",
+      "name": "Detection coverage gaps",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "Prioritize detection engineering against the highest-impact uncovered fraud and intrusion behaviors.",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
+      "id": "PIR-AI-001",
+      "name": "Evidence-backed AI capability changes",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "Separate reproducible AI-enabled threat capability from marketing claims and prioritize only changes that alter defensive assumptions.",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
+      "id": "PIR-BR-002",
+      "name": "External signals that improve fraud decisions",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "Decide which cross-sector signals are worth integrating into fraud prevention without treating a single signal as proof of wrongdoing.",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
+      "id": "PIR-GLOBAL-001",
+      "name": "Financial threat actor convergence",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "Determine whether global financial threat actors exhibit infrastructure, tooling or TTP overlap relevant to Brazil and Latin America.",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
+      "id": "PIR-BR-001",
+      "name": "Payment authorization threat actors",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "Prioritize controls, telemetry and hunting for actors capable of reaching or manipulating Brazilian payment authorization infrastructure.",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
       "id": "FI-THREAT-BR-001",
       "name": "BraZetsu",
       "type": "threat",
@@ -388,6 +444,24 @@
       "scope": "pin-pad-communication-monitoring, transaction-flow-integrity, cryptogram-anomaly-analysis, contactless-to-chip-shift-monitoring",
       "status": "active",
       "source": "https://securelist.com/prilex-atm-pos-malware-evolution/107551/"
+    },
+    {
+      "id": "WW-AI-001",
+      "name": "Agentic AI materially changes fraud or OSINT operating scale",
+      "type": "watch",
+      "category": "watch-and-warning",
+      "scope": "Trigger only when primary research is reproducible or a real incident is independently corroborated; demonstrations alone remain research signals.",
+      "status": "watching",
+      "source": "../knowledge/watch-warning.yml"
+    },
+    {
+      "id": "WW-BR-001",
+      "name": "Escalation toward Brazilian payment-authorization infrastructure",
+      "type": "watch",
+      "category": "watch-and-warning",
+      "scope": "Trigger when one confirmed organization-specific event or two independent public signposts appear inside a 30-day analytical window.",
+      "status": "watching",
+      "source": "../knowledge/watch-warning.yml"
     }
   ]
 }

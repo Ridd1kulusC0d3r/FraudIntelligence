@@ -1,0 +1,31 @@
+version: "0.1"
+last_verified: "2026-10-01"
+campaigns:
+  - id: FI-CAM-BR-BC-2024-2026
+    name: BREEZE COMET payment-infrastructure campaign cluster
+    status: active
+    first_seen: "2024"
+    last_seen: "2026-09"
+    actor_refs: [FI-ACTOR-BR-001]
+    objective: >
+      Obtain durable access to organizations and systems able to execute or
+      support fraudulent transfers through Brazilian payment infrastructure.
+    targeting:
+      - financial-services
+      - payment-processors
+      - fintech
+      - retail
+      - ecommerce
+      - banking-software-providers
+    regions: [Brazil, Latin-America]
+    behaviors:
+      - credential-and-account-abuse
+      - cloud-and-ci-cd-secret-targeting
+      - mtls-credential-targeting
+      - multi-environment-persistence
+      - payment-api-access
+    source_refs:
+      - https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil
+    confidence: confirmed
+    tlp: TLP:CLEAR
+    last_reviewed: "2026-10-01"

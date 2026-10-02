@@ -1,0 +1,97 @@
+version: "0.1"
+last_verified: "2026-10-01"
+coverage_records:
+  - id: FI-COV-BR-BC-001
+    subject_ref: FI-CAM-BR-BC-2024-2026
+    behavior:
+      framework: mitre-attack
+      id: T1078.002
+      name: Valid Accounts - Domain Accounts
+    observable:
+      - privileged or service account logons across atypical hosts
+      - unusual remote interactive or network logon patterns on sensitive systems
+    telemetry:
+      - Windows Security authentication events
+      - Active Directory authentication telemetry
+      - endpoint process telemetry
+    attack_data_components:
+      - {id: DC0067, name: Logon Session Creation}
+      - {id: DC0002, name: User Account Authentication}
+      - {id: DC0032, name: Process Creation}
+    attack_detection_strategies:
+      - {id: DET0210, name: Abuse of Domain Accounts}
+    analytics:
+      - correlate sensitive-account logons across hosts, time windows and remote-access patterns
+    controls:
+      - phishing-resistant MFA
+      - privileged-access management
+      - service-account scope reduction
+    d3fend:
+      - {id: D3-MFA, name: Multi-factor Authentication}
+      - {id: D3-CH, name: Credential Hardening}
+    coverage: partial
+    maturity: concept
+    last_reviewed: "2026-10-01"
+    notes: >
+      ATT&CK provides a detection strategy and data components; the project still
+      needs environment-specific thresholds and test fixtures.
+
+  - id: FI-COV-BR-BC-002
+    subject_ref: FI-CAM-BR-BC-2024-2026
+    behavior:
+      framework: mitre-attack
+      id: T1078.004
+      name: Valid Accounts - Cloud Accounts
+    observable:
+      - privileged cloud authentication outside established account patterns
+      - unusual API scope or service access by high-privilege identities
+    telemetry:
+      - cloud identity provider logs
+      - cloud audit and API activity
+    attack_data_components:
+      - {id: DC0002, name: User Account Authentication}
+    attack_detection_strategies:
+      - {id: DET0546, name: Detection of Abused or Compromised Cloud Accounts for Access and Persistence}
+    analytics:
+      - identify privileged cloud use that deviates from normal account and service scope
+    controls:
+      - phishing-resistant MFA
+      - workload identity separation
+      - credential revocation
+    d3fend:
+      - {id: D3-MFA, name: Multi-factor Authentication}
+      - {id: D3-CE, name: Credential Eviction}
+    coverage: partial
+    maturity: concept
+    last_reviewed: "2026-10-01"
+    notes: >
+      This is a defensive crosswalk, not a claim that every cloud-account event is
+      attributable to BREEZE COMET.
+
+  - id: FI-COV-ATM-001
+    subject_ref: FI-THREAT-ATM-001
+    behavior:
+      framework: project-native
+      id: atm-dispense-without-auth
+      name: Cash dispense without expected switch authorization
+    observable:
+      - ATM dispense event without matching payment-switch authorization
+    telemetry:
+      - ATM electronic journal
+      - XFS middleware telemetry
+      - payment-switch authorization records
+    attack_data_components: []
+    attack_detection_strategies: []
+    analytics:
+      - FI-DET-ATM-001
+    controls:
+      - transaction reconciliation
+      - physical-logical event correlation
+    d3fend:
+      - {id: D3-NI, name: Network Isolation}
+    coverage: covered
+    maturity: draft
+    last_reviewed: "2026-10-01"
+    notes: >
+      This record intentionally remains project-native where ATT&CK does not
+      provide a precise fraud-domain behavior match.
