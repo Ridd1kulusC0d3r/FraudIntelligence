@@ -169,10 +169,10 @@
       "name": "BREEZE COMET payment-infrastructure campaign cluster",
       "type": "campaign",
       "category": "campaign",
-      "scope": "Brazilian payment infrastructure, privileged identity, cloud/CI-CD and payment APIs",
+      "scope": "Obtain durable access to organizations and systems able to execute or support fraudulent transfers through Brazilian payment infrastructure.",
       "status": "active",
       "source": "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil",
-      "region": "Brazil / Latin America",
+      "region": "Brazil / Latin-America",
       "confidence": "confirmed"
     },
     {
@@ -360,7 +360,7 @@
       "name": "Detection coverage gaps",
       "type": "requirement",
       "category": "priority-intelligence-requirement",
-      "scope": "F3, FT3 and ATT&CK behaviors without observable, telemetry or tested detection coverage",
+      "scope": "Prioritize detection engineering against the highest-impact uncovered fraud and intrusion behaviors.",
       "status": "active",
       "source": "../knowledge/intelligence-requirements.yml"
     },
@@ -369,7 +369,7 @@
       "name": "Evidence-backed AI capability changes",
       "type": "requirement",
       "category": "priority-intelligence-requirement",
-      "scope": "Separate reproducible AI-enabled capability from demonstrations and marketing claims",
+      "scope": "Separate reproducible AI-enabled threat capability from marketing claims and prioritize only changes that alter defensive assumptions.",
       "status": "active",
       "source": "../knowledge/intelligence-requirements.yml"
     },
@@ -378,7 +378,7 @@
       "name": "External signals that improve fraud decisions",
       "type": "requirement",
       "category": "priority-intelligence-requirement",
-      "scope": "Telecom, identity, device and public signals that materially improve fraud decisions",
+      "scope": "Decide which cross-sector signals are worth integrating into fraud prevention without treating a single signal as proof of wrongdoing.",
       "status": "active",
       "source": "../knowledge/intelligence-requirements.yml"
     },
@@ -387,7 +387,7 @@
       "name": "Financial threat actor convergence",
       "type": "requirement",
       "category": "priority-intelligence-requirement",
-      "scope": "Infrastructure, tooling and TTP overlap relevant to Brazil and Latin America",
+      "scope": "Determine whether global financial threat actors exhibit infrastructure, tooling or TTP overlap relevant to Brazil and Latin America.",
       "status": "active",
       "source": "../knowledge/intelligence-requirements.yml"
     },
@@ -396,7 +396,7 @@
       "name": "Payment authorization threat actors",
       "type": "requirement",
       "category": "priority-intelligence-requirement",
-      "scope": "Actors able to reach or manipulate Brazilian payment authorization infrastructure",
+      "scope": "Prioritize controls, telemetry and hunting for actors capable of reaching or manipulating Brazilian payment authorization infrastructure.",
       "status": "active",
       "source": "../knowledge/intelligence-requirements.yml"
     },
@@ -450,7 +450,7 @@
       "name": "Agentic AI operating-scale change",
       "type": "watch",
       "category": "watch-and-warning",
-      "scope": "Evidence that agentic AI materially changes fraud or OSINT operating scale",
+      "scope": "Trigger only when primary research is reproducible or a real incident is independently corroborated; demonstrations alone remain research signals.",
       "status": "watching",
       "source": "../knowledge/watch-warning.yml"
     },
@@ -459,7 +459,7 @@
       "name": "Brazilian payment-authorization escalation",
       "type": "watch",
       "category": "watch-and-warning",
-      "scope": "Signposts of escalation from enterprise access toward payment execution",
+      "scope": "Trigger when one confirmed organization-specific event or two independent public signposts appear inside a 30-day analytical window.",
       "status": "watching",
       "source": "../knowledge/watch-warning.yml"
     }
