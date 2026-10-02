@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FraudIntelligence Source Assessment",
+  "type": "object",
+  "required": ["source_id","reliability","method_transparency","evidence_proximity","independence","assessment","last_reviewed"],
+  "properties": {
+    "source_id": {"type":"string"},
+    "reliability": {"type":"string","enum":["high","medium","low","unknown"]},
+    "method_transparency": {"type":"string","enum":["high","medium","low","unknown"]},
+    "evidence_proximity": {"type":"string","enum":["direct","near-direct","indirect","unknown"]},
+    "independence": {"type":"string","enum":["primary","independent-secondary","derivative","unknown"]},
+    "assessment": {"type":"string","minLength":10},
+    "limitations": {"type":"array","items":{"type":"string"}},
+    "last_reviewed": {"type":"string","format":"date"}
+  },
+  "additionalProperties": false
+}

@@ -1,91 +1,45 @@
 # Roadmap
 
 ## v0.1 — Foundation ✅
-
 Core schema, source registry, Brazil layer, ATM/PoS vertical, initial detections and validation.
 
 ## v0.2 — Intelligence Expansion ✅
+Classification, crime science, identity/onboarding, automated abuse, AI/provenance, telecom signals, regional landscape and F3/FT3 sync.
 
-Classification, crime science, identity/onboarding, automated abuse, AI/provenance, telecom signals, Brazil/LatAm landscape, actor/threat registries, FraudSignal/Crosswalk schemas and upstream F3/FT3 sync.
+## v0.3 — Intelligence Radar & Operating Model ✅
+Threat Actor Radar, global financial actors, APT38/Lazarus normalization, PIRs and intelligence-tradecraft doctrine.
 
-## v0.3 — Intelligence Radar & Operating Model 🚧
-
-### Delivered
-- visual Threat Actor Radar;
-- global financial actor registry;
-- APT38 / Lazarus attribution separation;
-- machine-readable Priority Intelligence Requirements;
-- Intelligence Tradecraft doctrine;
-- scalable multi-file actor/threat catalog build;
-- richer Navigator metadata.
-
-### Next
-- source reliability / credibility model;
-- hypothesis + alternatives schema;
-- campaign objects with temporal bounds;
-- indicators/signposts and watch-and-warning objects;
-- collection-plan coverage per PIR;
-- TLP 2.0 markings.
-
-## v0.4 — Crosswalk & Detection Coverage Engine
-
-- parse synchronized F3/FT3 objects;
-- ATT&CK STIX references;
-- ATT&CK Detection Strategies and Data Components;
-- evidence-backed mappings;
+## v0.4 — Intelligence Operations ✅
+- source-quality model separated from analytic confidence;
+- campaigns with temporal bounds;
+- competing hypotheses and alternatives;
+- collection plans tied to PIRs;
+- signposts and Watch & Warning thresholds;
+- FIRST TLP 2.0 handling;
+- ATT&CK Detection Strategies + Data Components crosswalk;
 - D3FEND countermeasure links;
-- coverage matrix:
-  `actor/campaign → technique → observable → telemetry → detection → control`;
-- orphan and stale-mapping tests;
-- Navigator coverage overlays.
+- detection coverage builder;
+- STIX 2.1 exporter;
+- TAXII-ready public collection package;
+- intelligence graph export;
+- Intelligence Product Factory;
+- CI validation for schemas and cross-object references.
 
-## v0.5 — Case Intelligence & Knowledge Graph
+## v0.5 — Crosswalk & Coverage Automation
+- ingest F3/FT3 source-native objects into normalized read models;
+- ATT&CK Enterprise STIX ingestion;
+- mapping review queue with evidence and rationale;
+- Navigator overlays for behavior → observable → telemetry → analytic → control;
+- stale/orphan mapping tests and test fixtures.
 
-- case and campaign schemas;
-- public case library;
-- actor/campaign/scheme/infrastructure graph;
-- money-movement graph;
-- time-aware edges;
-- entity-resolution confidence;
-- GraphML / JSON exports.
+## v0.6 — Case Intelligence & Money Graph
+Case schema, public case library, beneficiary/mule/device/account graphs, temporal entity resolution, case-to-campaign linkage and outcome feedback.
 
-## v0.6 — CTI Interoperability & Signal Exchange
-
-- STIX 2.1 export;
-- TAXII 2.1 research/service;
-- MISP interoperability;
-- FraudSignal feedback lifecycle;
-- confidence updates;
-- share/revoke semantics;
-- FRIDA readiness mapping.
-
-## v0.7 — Detection Engineering
-
-- reconciliation analytics;
-- sequence-integrity analytics;
-- graph detections for mule networks;
-- missing-signal / absence analytics;
-- identity and telecom signals;
-- detection maturity scoring;
-- test datasets.
+## v0.7 — CTI Exchange Service
+Optional conformant TAXII 2.1 service, MISP interoperability, FRIDA readiness and TLP-aware lifecycle.
 
 ## v0.8 — AI Analyst Interface
-
-- retrieval-optimized knowledge chunks;
-- read-only MCP interface;
-- grounded classification;
-- source citations;
-- analyst approval;
-- bounded automation;
-- append-only decision logs.
+Grounded retrieval, read-only MCP service, evidence citations, alternatives, analyst approval and append-only decision logs.
 
 ## v1.0 — Public Fraud Intelligence Platform
-
-- stable schema;
-- interactive explorer;
-- versioned datasets;
-- coverage dashboards;
-- regional packs;
-- reproducible research;
-- community governance;
-- intelligence product generation.
+Stable schema, explorer, versioned datasets, coverage dashboards, regional packs, reproducible research, community governance and automated intelligence products.

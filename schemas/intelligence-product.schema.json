@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FraudIntelligence Product Metadata",
+  "type": "object",
+  "required": ["id","type","title","tlp","confidence","as_of","requirements","key_judgments","uncertainties"],
+  "properties": {
+    "id": {"type":"string"},
+    "type": {"type":"string","enum":["threat-actor-profile","campaign-brief","intelligence-estimate","watch-warning","weekly-brief","detection-coverage","collection-gap","executive-one-pager"]},
+    "title": {"type":"string"},
+    "tlp": {"type":"string","enum":["TLP:RED","TLP:AMBER","TLP:GREEN","TLP:CLEAR"]},
+    "confidence": {"type":"string","enum":["high","medium","low"]},
+    "as_of": {"type":"string","format":"date"},
+    "requirements": {"type":"array","items":{"type":"string"}},
+    "evidence_refs": {"type":"array","items":{"type":"string"}},
+    "key_judgments": {"type":"array","items":{"type":"string"}},
+    "uncertainties": {"type":"array","items":{"type":"string"}},
+    "implications": {"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties": false
+}

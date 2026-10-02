@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FraudIntelligence Watch and Warning",
+  "type": "object",
+  "required": ["id","title","pir_id","severity","status","signposts","threshold","actions","tlp","last_reviewed"],
+  "properties": {
+    "id": {"type":"string","pattern":"^WW-[A-Z0-9-]+$"},
+    "title": {"type":"string"},
+    "pir_id": {"type":"string"},
+    "hypothesis_refs": {"type":"array","items":{"type":"string"}},
+    "severity": {"type":"string","enum":["critical","high","medium","low"]},
+    "status": {"type":"string","enum":["watching","triggered","closed"]},
+    "signposts": {"type":"array","minItems":1,"items":{"type":"string"}},
+    "threshold": {"type":"string","minLength":10},
+    "actions": {"type":"array","minItems":1,"items":{"type":"string"}},
+    "tlp": {"type":"string","enum":["TLP:RED","TLP:AMBER","TLP:GREEN","TLP:CLEAR"]},
+    "last_reviewed": {"type":"string","format":"date"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,37 @@
+version: "0.1"
+last_verified: "2026-10-01"
+source_assessments:
+  - source_id: SRC-GTIG-BREEZE-COMET
+    reliability: high
+    method_transparency: high
+    evidence_proximity: direct
+    independence: primary
+    assessment: >
+      Primary threat-research reporting from investigators describing observed
+      compromises, forensic evidence, actor tooling, detections and mitigations.
+    limitations:
+      - visibility is bounded to incidents and telemetry available to the publisher
+      - some attribution judgments remain vendor-specific
+    last_reviewed: "2026-10-01"
+
+  - source_id: SRC-MITRE-ATTACK
+    reliability: high
+    method_transparency: high
+    evidence_proximity: near-direct
+    independence: independent-secondary
+    assessment: >
+      Curated behavioral knowledge base with source references and stable IDs,
+      suitable for normalization and crosswalks rather than incident truth by itself.
+    limitations:
+      - technique coverage reflects published evidence and is not exhaustive
+    last_reviewed: "2026-10-01"
+
+  - source_id: SRC-FIRST-TLP20
+    reliability: high
+    method_transparency: high
+    evidence_proximity: direct
+    independence: primary
+    assessment: >
+      Authoritative FIRST specification for TLP 2.0 sharing boundaries.
+    limitations: []
+    last_reviewed: "2026-10-01"

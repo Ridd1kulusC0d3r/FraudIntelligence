@@ -1,6 +1,6 @@
 {
-  "version": "0.3",
-  "count": 36,
+  "version": "0.4",
+  "count": 44,
   "items": [
     {
       "id": "FI-ACTOR-KP-001",
@@ -163,6 +163,17 @@
       "confidence": "confirmed",
       "featured": true,
       "aliases": []
+    },
+    {
+      "id": "FI-CAM-BR-BC-2024-2026",
+      "name": "BREEZE COMET payment-infrastructure campaign cluster",
+      "type": "campaign",
+      "category": "campaign",
+      "scope": "Brazilian payment infrastructure, privileged identity, cloud/CI-CD and payment APIs",
+      "status": "active",
+      "source": "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil",
+      "region": "Brazil / Latin America",
+      "confidence": "confirmed"
     },
     {
       "id": "acfe-fraud-tree",
@@ -345,6 +356,51 @@
       "source": "https://www.accc.gov.au/about-us/scams-prevention-framework"
     },
     {
+      "id": "PIR-DET-001",
+      "name": "Detection coverage gaps",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "F3, FT3 and ATT&CK behaviors without observable, telemetry or tested detection coverage",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
+      "id": "PIR-AI-001",
+      "name": "Evidence-backed AI capability changes",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "Separate reproducible AI-enabled capability from demonstrations and marketing claims",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
+      "id": "PIR-BR-002",
+      "name": "External signals that improve fraud decisions",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "Telecom, identity, device and public signals that materially improve fraud decisions",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
+      "id": "PIR-GLOBAL-001",
+      "name": "Financial threat actor convergence",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "Infrastructure, tooling and TTP overlap relevant to Brazil and Latin America",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
+      "id": "PIR-BR-001",
+      "name": "Payment authorization threat actors",
+      "type": "requirement",
+      "category": "priority-intelligence-requirement",
+      "scope": "Actors able to reach or manipulate Brazilian payment authorization infrastructure",
+      "status": "active",
+      "source": "../knowledge/intelligence-requirements.yml"
+    },
+    {
       "id": "FI-THREAT-BR-001",
       "name": "BraZetsu",
       "type": "threat",
@@ -388,6 +444,24 @@
       "scope": "pin-pad-communication-monitoring, transaction-flow-integrity, cryptogram-anomaly-analysis, contactless-to-chip-shift-monitoring",
       "status": "active",
       "source": "https://securelist.com/prilex-atm-pos-malware-evolution/107551/"
+    },
+    {
+      "id": "WW-AI-001",
+      "name": "Agentic AI operating-scale change",
+      "type": "watch",
+      "category": "watch-and-warning",
+      "scope": "Evidence that agentic AI materially changes fraud or OSINT operating scale",
+      "status": "watching",
+      "source": "../knowledge/watch-warning.yml"
+    },
+    {
+      "id": "WW-BR-001",
+      "name": "Brazilian payment-authorization escalation",
+      "type": "watch",
+      "category": "watch-and-warning",
+      "scope": "Signposts of escalation from enterprise access toward payment execution",
+      "status": "watching",
+      "source": "../knowledge/watch-warning.yml"
     }
   ]
 }
