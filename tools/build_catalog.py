@@ -25,17 +25,17 @@ def build_payload():
     watches = read_yaml(ROOT/'knowledge/watch-warning.yml').get('watch_items', [])
     items = []
     for x in frameworks:
-        items.append({'id':x['id'],'name':x['name'],'type':'reference','category':x['kind'],'scope':x['scope'],'status':x['status'],'source':x['source']})
+        items.append({'id':x['id'],'name':x['name'],'type':'reference','category':x['kind'],'scope':str(x['scope']).strip(),'status':x['status'],'source':x['source']})
     for x in actors:
         items.append({'id':x['id'],'name':x['name'],'type':'actor','category':x['type'],'scope':', '.join(x.get('focus',[])),'status':x['status'],'source':x['source'],'region':x.get('region'),'confidence':x.get('confidence'),'featured':bool(x.get('featured',False)),'aliases':x.get('aliases',[])})
     for x in threats:
         items.append({'id':x['id'],'name':x['name'],'type':'threat','category':x['class'],'scope':', '.join(x.get('defensive_relevance',[])),'status':x['status'],'source':x['source']})
     for x in campaigns:
-        items.append({'id':x['id'],'name':x['name'],'type':'campaign','category':'campaign','scope':x['objective'],'status':x['status'],'source':x['source_refs'][0],'region':' / '.join(x.get('regions',[])),'confidence':x.get('confidence')})
+        items.append({'id':x['id'],'name':x['name'],'type':'campaign','category':'campaign','scope':str(x['objective']).strip(),'status':x['status'],'source':x['source_refs'][0],'region':' / '.join(x.get('regions',[])),'confidence':x.get('confidence')})
     for x in requirements:
-        items.append({'id':x['id'],'name':x['title'],'type':'requirement','category':'priority-intelligence-requirement','scope':x['decision_supported'],'status':x['status'],'source':'../knowledge/intelligence-requirements.yml'})
+        items.append({'id':x['id'],'name':x['title'],'type':'requirement','category':'priority-intelligence-requirement','scope':str(x['decision_supported']).strip(),'status':x['status'],'source':'../knowledge/intelligence-requirements.yml'})
     for x in watches:
-        items.append({'id':x['id'],'name':x['title'],'type':'watch','category':'watch-and-warning','scope':x['threshold'],'status':x['status'],'source':'../knowledge/watch-warning.yml'})
+        items.append({'id':x['id'],'name':x['title'],'type':'watch','category':'watch-and-warning','scope':str(x['threshold']).strip(),'status':x['status'],'source':'../knowledge/watch-warning.yml'})
     return {'version':'0.4','count':len(items),'items':sorted(items,key=lambda x:(x['type'],x['name'].lower()))}
 
 def main():
