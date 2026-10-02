@@ -447,7 +447,7 @@
     },
     {
       "id": "WW-AI-001",
-      "name": "Agentic AI operating-scale change",
+      "name": "Agentic AI materially changes fraud or OSINT operating scale",
       "type": "watch",
       "category": "watch-and-warning",
       "scope": "Trigger only when primary research is reproducible or a real incident is independently corroborated; demonstrations alone remain research signals.",
@@ -456,7 +456,7 @@
     },
     {
       "id": "WW-BR-001",
-      "name": "Brazilian payment-authorization escalation",
+      "name": "Escalation toward Brazilian payment-authorization infrastructure",
       "type": "watch",
       "category": "watch-and-warning",
       "scope": "Trigger when one confirmed organization-specific event or two independent public signposts appear inside a 30-day analytical window.",
