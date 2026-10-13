@@ -14,8 +14,8 @@ CACHE = ROOT / ".cache" / "upstream"
 
 SOURCES = {
     "mitre-f3-v1.2": "https://raw.githubusercontent.com/center-for-threat-informed-defense/fight-fraud-framework/main/public/f3-v1.2.json",
-    "stripe-ft3-tactics": "https://raw.githubusercontent.com/stripe/ft3/main/FT3_Tactics.json",
-    "stripe-ft3-techniques": "https://raw.githubusercontent.com/stripe/ft3/main/FT3_Techniques.json",
+    "stripe-ft3-tactics": "https://raw.githubusercontent.com/stripe/ft3/master/FT3_Tactics.json",
+    "stripe-ft3-techniques": "https://raw.githubusercontent.com/stripe/ft3/master/FT3_Techniques.json",
 }
 
 
